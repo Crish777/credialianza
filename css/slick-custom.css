@@ -1,0 +1,41 @@
+.slickContiner .slick-track {
+   display: flex;
+   gap: 28px;
+ }
+
+.slickContiner .slick-arrow {
+   position: absolute;
+   width: 56px;
+   height: 56px;
+   border-radius: 100%;
+   background-color: rgba(34, 131, 178, 1);
+   background-position: center center;
+   background-repeat: no-repeat;
+   background-size: 20%;
+ }
+ 
+ .slickContiner  .slick-next {
+   
+   background-image: url(../images/slickRight.svg);
+   bottom: -115px;
+   top: unset;
+   left: 50%;
+   margin-left: 10px;
+ }
+ 
+ .slickContiner  .slick-prev {
+   background-image: url(../images/slickLeft.svg);
+   bottom: -115px;
+   top: unset;
+   right: 50%;
+   left: unset;
+   margin-right: 10px;
+ }
+
+ .slickContiner  .slick-next::before {
+   content: none;
+ }
+ 
+.slickContiner  .slick-prev::before {
+   content: none;
+ }
