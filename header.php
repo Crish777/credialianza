@@ -43,42 +43,66 @@ $themeDirectory = themeDirectory();
           <!-- nosotros-->
           <div class="itemMenuContainer"> 
             <a class="itemMenu" href="#">
-                <span class="itemMenuText"> Nosotros </span>
+              <span class="itemMenuText"> Nosotros </span>
               <img class="itemMenuArrow" src="<?= themeDirectory(); ?>images/arrowdown.svg">
             </a>
             <div class="dropdownMenu">
-              <a class="menuSubitem" style="background-image: url('<?= $themeDirectory; ?>trashimages/hero1.jpg');" href="#">FILOSOFÍA</a>
-              <a class="menuSubitem" style="background-image: url('<?= $themeDirectory; ?>trashimages/hero1.jpg');" href="#">VALORES</a>
-              <a class="menuSubitem" style="background-image: url('<?= $themeDirectory; ?>trashimages/hero1.jpg');" href="#">¿DONDE NOS ENCONTRAMOS?</a>
-              <a class="menuSubitem" style="background-image: url('<?= $themeDirectory; ?>trashimages/hero1.jpg');" href="#">NUESTRAS POLÍTICAS</a>
+              <a class="menuSubitem darkGradient" style="background-image: url('<?= $themeDirectory; ?>trashimages/hero1.jpg');" href="#">
+                <h2 class="menuSubitemTitle">FILOSOFÍA</h2>
+              </a>
+              <a class="menuSubitem darkGradient" style="background-image: url('<?= $themeDirectory; ?>trashimages/hero1.jpg');" href="#">
+                <h2 class="menuSubitemTitle">VALORES</h2>
+              </a>
+              <a class="menuSubitem darkGradient" style="background-image: url('<?= $themeDirectory; ?>trashimages/hero1.jpg');" href="#">
+                <h2 class="menuSubitemTitle">¿DONDE NOS ENCONTRAMOS?</h2>
+              </a>
+              <a class="menuSubitem darkGradient" style="background-image: url('<?= $themeDirectory; ?>trashimages/hero1.jpg');" href="#">
+                <h2 class="menuSubitemTitle">NUESTRAS POLÍTICAS</h2>
+              </a>
             </div>
           </div>
 
           <!-- Crédito de libranza-->
           <div class="itemMenuContainer"> 
             <a class="itemMenu" href="#">
-                <span class="itemMenuText"> Crédito de libranza </span>
+              <span class="itemMenuText"> Crédito de libranza </span>
               <img class="itemMenuArrow" src="<?= themeDirectory(); ?>images/arrowdown.svg">
             </a>
             <div class="dropdownMenu">
-              <a class="menuSubitem" style="background-image: url('<?= $themeDirectory; ?>trashimages/hero1.jpg');" href="#">FILOSOFÍA</a>
-              <a class="menuSubitem" style="background-image: url('<?= $themeDirectory; ?>trashimages/hero1.jpg');" href="#">VALORES</a>
-              <a class="menuSubitem" style="background-image: url('<?= $themeDirectory; ?>trashimages/hero1.jpg');" href="#">¿DONDE NOS ENCONTRAMOS?</a>
-              <a class="menuSubitem" style="background-image: url('<?= $themeDirectory; ?>trashimages/hero1.jpg');" href="#">NUESTRAS POLÍTICAS</a>
+              <a class="menuSubitem darkGradient" style="background-image: url('<?= $themeDirectory; ?>trashimages/hero1.jpg');" href="#">
+                <h2 class="menuSubitemTitle">FILOSOFÍA</h2>
+              </a>
+              <a class="menuSubitem darkGradient" style="background-image: url('<?= $themeDirectory; ?>trashimages/hero1.jpg');" href="#">
+                <h2 class="menuSubitemTitle">VALORES</h2>
+              </a>
+              <a class="menuSubitem darkGradient" style="background-image: url('<?= $themeDirectory; ?>trashimages/hero1.jpg');" href="#">
+                <h2 class="menuSubitemTitle">¿DONDE NOS ENCONTRAMOS?</h2>
+              </a>
+              <a class="menuSubitem darkGradient" style="background-image: url('<?= $themeDirectory; ?>trashimages/hero1.jpg');" href="#">
+                <h2 class="menuSubitemTitle">NUESTRAS POLÍTICAS</h2>
+              </a>
             </div>
           </div>
 
           <!-- Solicitudes-->
           <div class="itemMenuContainer"> 
             <a class="itemMenu" href="#">
-                <span class="itemMenuText"> Solicitudes </span>
+              <span class="itemMenuText"> Solicitudes </span>
               <img class="itemMenuArrow" src="<?= themeDirectory(); ?>images/arrowdown.svg">
             </a>
             <div class="dropdownMenu">
-              <a class="menuSubitem" style="background-image: url('<?= $themeDirectory; ?>trashimages/hero1.jpg');" href="#">FILOSOFÍA</a>
-              <a class="menuSubitem" style="background-image: url('<?= $themeDirectory; ?>trashimages/hero1.jpg');" href="#">VALORES</a>
-              <a class="menuSubitem" style="background-image: url('<?= $themeDirectory; ?>trashimages/hero1.jpg');" href="#">¿DONDE NOS ENCONTRAMOS?</a>
-              <a class="menuSubitem" style="background-image: url('<?= $themeDirectory; ?>trashimages/hero1.jpg');" href="#">NUESTRAS POLÍTICAS</a>
+              <a class="menuSubitem darkGradient" style="background-image: url('<?= $themeDirectory; ?>trashimages/hero1.jpg');" href="#">
+                <h2 class="menuSubitemTitle">FILOSOFÍA</h2>
+              </a>
+              <a class="menuSubitem darkGradient" style="background-image: url('<?= $themeDirectory; ?>trashimages/hero1.jpg');" href="#">
+                <h2 class="menuSubitemTitle">VALORES</h2>
+              </a>
+              <a class="menuSubitem darkGradient" style="background-image: url('<?= $themeDirectory; ?>trashimages/hero1.jpg');" href="#">
+                <h2 class="menuSubitemTitle">¿DONDE NOS ENCONTRAMOS?</h2>
+              </a>
+              <a class="menuSubitem darkGradient" style="background-image: url('<?= $themeDirectory; ?>trashimages/hero1.jpg');" href="#">
+                <h2 class="menuSubitemTitle">NUESTRAS POLÍTICAS</h2>
+              </a>
             </div>
           </div>
 
@@ -93,43 +117,66 @@ $themeDirectory = themeDirectory();
 
         <div class="menuItemContainer">
           <div class="menuItem">
-            <div class="menuCategory">
+            <div class="menuCategory ">
+              <h2 class="menuCategoryTitle bottomBorderBlue">Nosotros</h2>
               <img class="mobileMenuArrow" src="<?= themeDirectory(); ?>images/arrowdown.svg">
-              Nosotros
-              
             </div>
             <div class="menuSubitemsContainer">
-              <div class="menuSubitem" style="background-image: url('<?= $themeDirectory; ?>trashimages/hero1.jpg');">FILOSOFÍA</div>
-              <div class="menuSubitem" style="background-image: url('<?= $themeDirectory; ?>trashimages/hero1.jpg');">VALORES</div>
-              <div class="menuSubitem" style="background-image: url('<?= $themeDirectory; ?>trashimages/hero1.jpg');">¿DONDE NOS ENCONTRAMOS?</div>
-              <div class="menuSubitem" style="background-image: url('<?= $themeDirectory; ?>trashimages/hero1.jpg');">NUESTRAS POLÍTICAS</div>
+            <a class="menuSubitem darkGradient" style="background-image: url('<?= $themeDirectory; ?>trashimages/hero1.jpg');" href="#">
+                <h2 class="menuSubitemTitle">FILOSOFÍA</h2>
+              </a>
+              <a class="menuSubitem darkGradient" style="background-image: url('<?= $themeDirectory; ?>trashimages/hero1.jpg');" href="#">
+                <h2 class="menuSubitemTitle">VALORES</h2>
+              </a>
+              <a class="menuSubitem darkGradient" style="background-image: url('<?= $themeDirectory; ?>trashimages/hero1.jpg');" href="#">
+                <h2 class="menuSubitemTitle">¿DONDE NOS ENCONTRAMOS?</h2>
+              </a>
+              <a class="menuSubitem darkGradient" style="background-image: url('<?= $themeDirectory; ?>trashimages/hero1.jpg');" href="#">
+                <h2 class="menuSubitemTitle">NUESTRAS POLÍTICAS</h2>
+              </a>
             </div>
           </div>
 
           <div class="menuItem">
-            <div class="menuCategory">
+            <div class="menuCategory ">
+              <h2 class="menuCategoryTitle bottomBorderBlue">Crédito de libranza</h2>
               <img class="mobileMenuArrow" src="<?= themeDirectory(); ?>images/arrowdown.svg">
-              Crédito de libranza
-              
             </div>
             <div class="menuSubitemsContainer">
-              <div class="menuSubitem" style="background-image: url('<?= $themeDirectory; ?>trashimages/hero1.jpg');">FILOSOFÍA</div>
-              <div class="menuSubitem" style="background-image: url('<?= $themeDirectory; ?>trashimages/hero1.jpg');">VALORES</div>
-              <div class="menuSubitem" style="background-image: url('<?= $themeDirectory; ?>trashimages/hero1.jpg');">¿DONDE NOS ENCONTRAMOS?</div>
-              <div class="menuSubitem" style="background-image: url('<?= $themeDirectory; ?>trashimages/hero1.jpg');">NUESTRAS POLÍTICAS</div>
-            </div>
+            <a class="menuSubitem darkGradient" style="background-image: url('<?= $themeDirectory; ?>trashimages/hero1.jpg');" href="#">
+                <h2 class="menuSubitemTitle">FILOSOFÍA</h2>
+              </a>
+              <a class="menuSubitem darkGradient" style="background-image: url('<?= $themeDirectory; ?>trashimages/hero1.jpg');" href="#">
+                <h2 class="menuSubitemTitle">VALORES</h2>
+              </a>
+              <a class="menuSubitem darkGradient" style="background-image: url('<?= $themeDirectory; ?>trashimages/hero1.jpg');" href="#">
+                <h2 class="menuSubitemTitle">¿DONDE NOS ENCONTRAMOS?</h2>
+              </a>
+              <a class="menuSubitem darkGradient" style="background-image: url('<?= $themeDirectory; ?>trashimages/hero1.jpg');" href="#">
+                <h2 class="menuSubitemTitle">NUESTRAS POLÍTICAS</h2>
+              </a>
+             </div>
           </div>
 
           <div class="menuItem">
-            <div class="menuCategory">
+            <div class="menuCategory ">
+              <h2 class="menuCategoryTitle bottomBorderBlue">Solicitudes</h2>
               <img class="mobileMenuArrow" src="<?= themeDirectory(); ?>images/arrowdown.svg">
-              Solicitudes
+              
             </div>
             <div class="menuSubitemsContainer">
-              <div class="menuSubitem" style="background-image: url('<?= $themeDirectory; ?>trashimages/hero1.jpg');">FILOSOFÍA</div>
-              <div class="menuSubitem" style="background-image: url('<?= $themeDirectory; ?>trashimages/hero1.jpg');">VALORES</div>
-              <div class="menuSubitem" style="background-image: url('<?= $themeDirectory; ?>trashimages/hero1.jpg');">¿DONDE NOS ENCONTRAMOS?</div>
-              <div class="menuSubitem" style="background-image: url('<?= $themeDirectory; ?>trashimages/hero1.jpg');">NUESTRAS POLÍTICAS</div>
+            <a class="menuSubitem darkGradient" style="background-image: url('<?= $themeDirectory; ?>trashimages/hero1.jpg');" href="#">
+                <h2 class="menuSubitemTitle">FILOSOFÍA</h2>
+              </a>
+              <a class="menuSubitem darkGradient" style="background-image: url('<?= $themeDirectory; ?>trashimages/hero1.jpg');" href="#">
+                <h2 class="menuSubitemTitle">VALORES</h2>
+              </a>
+              <a class="menuSubitem darkGradient" style="background-image: url('<?= $themeDirectory; ?>trashimages/hero1.jpg');" href="#">
+                <h2 class="menuSubitemTitle">¿DONDE NOS ENCONTRAMOS?</h2>
+              </a>
+              <a class="menuSubitem darkGradient" style="background-image: url('<?= $themeDirectory; ?>trashimages/hero1.jpg');" href="#">
+                <h2 class="menuSubitemTitle">NUESTRAS POLÍTICAS</h2>
+              </a>
             </div>
           </div>
           

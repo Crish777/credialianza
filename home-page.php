@@ -24,12 +24,12 @@
 
   <div class="dualContainer">
     <div class="dualTextConatiner">
-      <h2 class="blueTitle">
+      <h2 class="blueTitle" data-aos="fade-left"  data-aos-duration="500">
         Credialianza es una empresa con </br>
         <strong>amplia experiencia</strong>
       </h2>
 
-      <p class="dualParagraph">
+      <p class="dualParagraph" data-aos="fade-left"  data-aos-duration="500">
         Y credibilidad en el mercado del crédito de libranzas. Ofrecemos atención personalizada en diferentes 
         ciudades del país. 
         </br></br>
@@ -123,12 +123,12 @@
 
   <div class="dualContainer inversed">
     <div class="dualTextConatiner">
-      <h2 class="blueTitle">
+      <h2 class="blueTitle" data-aos="fade-left"  data-aos-duration="500">
         Solicita tu crédito en  </br>
         <strong>tres pasos</strong>
       </h2> 
 
-      <p class="dualParagraph">
+      <p class="dualParagraph" data-aos="fade-left"  data-aos-duration="500">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
       tempor incididunt ut labore et dolore magna aliqua. 
       </p>
@@ -168,7 +168,7 @@
         <div class="moreIcon"></div>
       </div>
 
-      <p class="dualParagraph">
+      <p class="dualParagraph" data-aos="fade-left"  data-aos-duration="500">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
       tempor incididunt ut labore et dolore magna aliqua. 
       </p>
@@ -351,7 +351,9 @@
 
 
   <div class="pannelContainer form" style="background-image: url('<?= $themeDirectory; ?>trashimages/pannel3.jpg');"  data-aos="fade-up"  data-aos-duration="700">
-   <img src="<?= themeDirectory(); ?>images/contactanos.svg" class="pannelFormTitle">
+   <h2 class="formHollowTitle">
+    CONTÁCTANOS
+   </h2>
    <p class="pannelParagraph">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do </br> 
       eiusmod tempor incididunt ut labore et dolore magna aliqua. 

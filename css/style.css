@@ -245,7 +245,6 @@ body {
   flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
-  gap: 20px;
   height: 100%;
 }
 
@@ -263,6 +262,7 @@ body {
 .itemMenuContainer {
   height: 100%;
   position: relative;
+  padding: 0 15px;
 }
 
 .itemMenu {
@@ -315,7 +315,7 @@ body {
   text-decoration: none;
   font-size: 18px;
   font-weight: 300;
-  line-height: 22px;
+  line-height: 1.1;
   text-align: left;
   position: relative;
   padding: 20px 15px;
@@ -347,16 +347,20 @@ body {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  font-size: 30px;
+}
+
+.menuCategoryTitle {
+  font-size: 24px;
   font-weight: 600;
   line-height: 1.2;
+  position: relative;
 }
 
 .menuItemContainer {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  padding: 50px 20px;
+  padding: 50px 2.5%;
 }
 
 .menuItem {
@@ -399,6 +403,7 @@ body {
 
 
 .menuSubitem {
+  position: relative;
   width: calc( ( 100% / 3 ) - 35px );
   height: 267px;
   background-repeat: no-repeat;
@@ -409,13 +414,18 @@ body {
   flex-direction: row;
   justify-content: flex-start;
   align-items: flex-end;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: all 0.5s ease;
+}
+
+.menuSubitemTitle {
+  position: absolute;
   font-size: 30px;
   font-weight: 300;
   line-height: 1.2;
   color: rgba(255, 255, 255, 1);
-  border-radius: 30px;
-  text-decoration: none;
-  transition: all 0.5s ease;
+  z-index: 2;
 }
 
 .menuSubitem:hover {
@@ -484,7 +494,7 @@ body {
 .footerLink {
   font-size: 20px;
   font-weight: 600;
-  line-height: 22px;
+  line-height: 1.1;
   color: rgba(35, 35, 35, 1);
   text-decoration: none;
   cursor: pointer;
@@ -493,7 +503,7 @@ body {
 .footerLinkParagraph {
   font-size: 16px;
   font-weight: 400;
-  line-height: 20px;
+  line-height: 1.2;
   color: rgba(35, 35, 35, 1);
   align-items: center;
 }
@@ -526,7 +536,7 @@ body {
   color: rgba(255, 255, 255, 1);
   font-size: 65px;
   font-weight: 300;
-  line-height: 63px;
+  line-height: 1;
   text-align: center;
   margin: 0 auto;
 
@@ -594,7 +604,7 @@ body {
 .blueTitle {
   font-size: 65px;
   font-weight: 300;
-  line-height: 63px;
+  line-height: 1;
   color: rgba(36, 141, 174, 1);
   margin-bottom: 32px;
 
@@ -611,7 +621,7 @@ body {
 .dualParagraph {
   font-size: 22px;
   font-weight: 300;
-  line-height: 26px;
+  line-height: 1.2;
   color: rgba(35, 35, 35, 1);
   margin-bottom: 30px;
 
@@ -650,7 +660,7 @@ body {
 .pannelTitle {
   font-size: 120px;
   font-weight: 300;
-  line-height: 103px;
+  line-height: 1;
   margin-bottom: 27px;
   color: rgba(245, 245, 245, 1);
 
@@ -663,7 +673,7 @@ body {
 .pannelParagraph {
   font-size: 22px;
   font-weight: 300;
-  line-height: 26px;
+  line-height: 1.2;
   color: rgba(255, 255, 255, 1);
   margin-bottom: 25px;
   text-align: center;
@@ -698,7 +708,7 @@ body {
 .pannelItemTitle {
   font-size: 35px;
   font-weight: 300;
-  line-height: 32px;
+  line-height: 1;
   margin-bottom: 20px;
   text-align: center;
   margin: 14px;
@@ -711,7 +721,7 @@ body {
 .pannelItemParagraph {
   font-size: 20px;
   font-weight: 300;
-  line-height: 24px;
+  line-height: 1.2;
   color: rgba(35, 35, 35, 1);
   text-align: center;
 
@@ -755,13 +765,13 @@ body {
   width: 100%;
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
+  align-items: center;
   flex-wrap: nowrap;
   border-radius: 40px;
   padding: 18px 20px;
   background-color: rgba(34, 131, 178, 1);
   margin-bottom: 10px;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease;
   /*
   transition: max-height 0.7s ease-in-out, opacity 0.3s ease, margin-top 0.7s ease-in-out, border-radius 0.7s ease-in-out; 
   */
@@ -774,8 +784,9 @@ body {
 .moreNumber {
   font-size: 30px;
   font-weight: 700;
-  line-height: 32px;
+  line-height: 1.1;
   color: rgba(255, 255, 255, 1);
+  align-self: baseline;
 }
 
 .moreText {
@@ -785,12 +796,13 @@ body {
   justify-content: flex-start;
   align-items: flex-start;
   margin: 0 12px;
+  align-self: flex-start;
 }
 
 .moreTitle {
   font-size: 22px;
   font-weight: 600;
-  line-height: 32px;
+  line-height: 1.5;
   color: rgba(255, 255, 255, 1);
 }
 
@@ -801,7 +813,7 @@ body {
   transition: all 0.5s ease-in-out;
   font-size: 22px;
   font-weight: 300;
-  line-height: 26px;
+  line-height: 1.2;
   color: rgba(255, 255, 255, 1);
   margin-top: 0px;
   interpolate-size: allow-keywords;
@@ -820,6 +832,7 @@ body {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: contain;
+  align-self: baseline;
 }
 
 .moreContainer.active .moreIcon {
@@ -853,7 +866,7 @@ body {
 .slickTitle {
   font-size: 20px;
   font-weight: 300;
-  line-height: 24px;
+  line-height: 1.2;
   color: rgba(255, 255, 255, 1);
 
   strong {
@@ -864,7 +877,7 @@ body {
 .slickSubTitle {
   font-size: 18px;
   font-weight: 300;
-  line-height: 24px;
+  line-height: 1.3;
   font-weight: 600;
   color: rgba(255, 255, 255, 1);
 }
@@ -872,14 +885,14 @@ body {
 .slickAddress {
   font-size: 16px;
   font-weight: 600;
-  line-height: 24px;
+  line-height: 1.3;
   color: rgba(217, 217, 217, 1);
 }
 
 .slickPharagraph {
   font-size: 18px;
   font-weight: 300;
-  line-height: 21px;
+  line-height: 1.2;
   color: rgba(255, 255, 255, 1);
   margin-top: 17px;
 }
@@ -935,6 +948,17 @@ body {
   margin-bottom: 26px;
 }
 
+.formHollowTitle {
+  font-size: 159px;
+  font-weight: 700;
+  line-height: 1.5;
+  text-align: center;
+  color: transparent;
+    stroke-width: 3px;
+    -webkit-text-stroke-color: #fff;
+    -webkit-text-stroke-width: 3px;
+}
+
 .formContainer {
   width: 70%;
   display: flex;
@@ -973,7 +997,7 @@ body {
 .formItemTitle {
   font-size: 22px;
   font-weight: 400;
-  line-height: 29px;
+  line-height: 1.3;
   text-align: left;
   color: rgba(35, 35, 35, 1);
   margin-bottom: 5px;
@@ -987,7 +1011,7 @@ body {
   display: block;
   width: 100%;
   font-size: 22px;
-  line-height: 29px;
+  line-height: 1.4;
   font-weight: 300;
   padding: 0;
   background: none;
@@ -1030,7 +1054,7 @@ body {
 .formBottomTitle {
   font-size: 20px;
   font-weight: 700;
-  line-height: 17px;
+  line-height: 1;
   color: rgba(255, 255, 255, 1);
   margin-bottom: 4px;
 }
@@ -1038,7 +1062,7 @@ body {
 .formBottomParagraph {
   font-size: 18px;
   font-weight: 300;
-  line-height: 21px;
+  line-height: 1.2;
   color: rgba(255, 255, 255, 1);
   text-align: left;
 }
@@ -1071,7 +1095,7 @@ body {
   overflow: hidden;
   display: flex;
   position: absolute;
-  top: 70%;
+  top: 73%;
   left: 50%;
   transform: translate(-50%, -50%);
 
@@ -1102,14 +1126,26 @@ body {
   animation: scrolling 10s linear infinite;
 }
 
+.darkGradient::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  height: 50%;
+  width: 100%;
+  left: 0;
+  border-radius: 30px;
+  z-index: 1;
+  background: linear-gradient(0deg, rgba(35, 35, 35, 0.7) 5.79%, rgba(35, 35, 35, 0.639732) 19.53%, rgba(35, 35, 35, 0.577027) 32.51%, rgba(35, 35, 35, 0) 94.35%);
+}
+
 .gradient-container::before,
 .gradient-container::after {
   content: '';
   position: absolute;
   top: 0;
-  width: 50px; /* Ancho del gradiente */
+  width: 50px; 
   height: 100%;
-  pointer-events: none; /* Evitar que interfiera con interacciones */
+  pointer-events: none; 
 }
 
 .gradient-container::before {
@@ -1122,6 +1158,17 @@ body {
 .gradient-container::after {
   right: 0;
   background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+}
+
+.bottomBorderBlue::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  height: 4px;
+  width: 100%;
+  left: 0;
+  border-radius: 2px;
+  background: linear-gradient(270deg, #20B3A3 0%, #247FB4 126.59%);
 }
 
 @keyframes scrolling {
@@ -1159,18 +1206,41 @@ body {
 
   .menuMobile {
     display: block;
+    top: 0;
     width: 100%;
     left: 100%;
     transition: all .5s ease;
     position: fixed;
-    height: calc(100vh - 100px);
-    top: 100px;
+    height: calc(100vh);
     overflow: auto;
     background-color: rgba(255, 255, 255, 1);
+    padding-top: 100px;
+    z-index: 100;
+  }
+
+  .headerContent {
+    z-index: 10000;
+  }
+
+  .menuSubitem {
+    width: 100%;
+    height: 120px;
+  }
+
+  .menuSubitemsContainer {
+    gap: 22px;
+  }
+
+  .menuSubitemTitle {
+    font-size: 20px;
   }
 
   .menuMobile.open {
     left: 0;
+  }
+
+  .burgerImage.closeIcon {
+    background-image: url(../images/close.svg);
   }
 
   .footerIconContainer {
@@ -1196,6 +1266,7 @@ body {
 
   .headerButtonSection, .footerButtonSection {
     position: relative;
+    padding: 0;
   }
 
   .footerContent {
@@ -1227,7 +1298,7 @@ body {
 
   .siteFooter {
     height: auto;
-    padding: 20px 0;
+    padding: 20px 2.5%;
   }
 
   .panelItemContainer {
@@ -1247,12 +1318,97 @@ body {
   .pannelLogoContainer {
     grid-template-columns: repeat(auto-fill, minmax(calc(100% / 3 - 14px), 1fr)); 
   }
+
+  .moreIcon {
+    height: 20px;
+  }
+
+   /* fonts */
+
+   .heroText {
+    font-size: 45px;
+  }
+
+  .blueTitle {
+    font-size: 45px;
+  }
+
+  .dualParagraph {
+    font-size: 20px;
+  }
+
+  .pannelTitle {
+    font-size: 52px;
+  }
+
+  .pannelParagraph {
+    font-size: 20px;
+  }
+
+  .pannelItemTitle {
+    font-size: 30px;
+  }
+
+  .pannelItemParagraph {
+    font-size: 18px;
+  }
+
+  .moreNumber {
+    font-size: 20px;
+  }
+
+  .moreTitle {
+    font-size: 18px;
+  }
+
+  .formItemTitle {
+    font-size: 18px;
+  }
+
+  .formItemInput {
+    font-size: 18px;
+    height: 30px;
+  }
+
+  .formBottomTitle {
+    font-size: 18px;
+  }
+
+  .formBottomParagraph {
+    font-size: 16px;
+  }
+
+  .footerLink {
+    font-size: 18px;
+  }
+
+  .footerLinkParagraph {
+    font-size: 12px;
+  }
+
+  .formHollowTitle {
+    font-size: 60px;
+    stroke-width: 1px;
+    -webkit-text-stroke-color: #fff;
+    -webkit-text-stroke-width: 1px;
+  }
   
 }
 
 @media only screen and (max-width: 768px) {
 
+  .headerIcon, .footerIcon {
+    height: 32px;
+  }
 
+  .headerContent {
+    height: 70px;
+  }
+
+  .headphoneButton, .burgerIcon {
+    width: 38px;
+    height: 38px;
+  }
 
   .siteHeader {
     height: 70px;
@@ -1269,6 +1425,10 @@ body {
   
   .heroContainer, .dualContainer, .pannelContainer, .carouselContainerAbsolute  {
     margin-bottom: 50px;
+  }
+
+  .heroContainer {
+    height: 60vh;
   }
 
   .slickContiner {
@@ -1339,6 +1499,28 @@ body {
     background-color: rgba(255, 255, 255, 1);
     margin: 20px 0;
   }
+
+  .dualImage {
+    aspect-ratio: 16 / 9;
+    min-height: 250px;
+  }
+
+  .blueButton {
+    font-size: 20px;
+    height: 50px;
+    padding: 0 32px;
+  }
+
+  .pannelItem {
+    padding: 20px 15px;
+  }
+
+  .footerButton {
+    width: 36px;
+    height: 36px;
+  }
+
+ 
 }
 
 @media only screen and (max-width: 480px) {
