@@ -11,7 +11,7 @@
 <main class="siteMain">
 
   <div class="heroContainer" style="background-image: url('<?= $themeDirectory; ?>trashimages/hero1.jpg');">
-    <h2 class="heroText">
+    <h2 class="heroSubtitle">
       Obtén tu crédito de </br>
       <strong>libranza con Credialianza</strong>
     </h2>

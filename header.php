@@ -16,6 +16,7 @@
 <?php 
 wp_head(); 
 $themeDirectory = themeDirectory();
+$homeDirectory = homeDirectory();
 ?>
 </head>
 
@@ -47,7 +48,7 @@ $themeDirectory = themeDirectory();
               <img class="itemMenuArrow" src="<?= themeDirectory(); ?>images/arrowdown.svg">
             </a>
             <div class="dropdownMenu">
-              <a class="menuSubitem darkGradient" style="background-image: url('<?= $themeDirectory; ?>trashimages/hero1.jpg');" href="#">
+              <a class="menuSubitem darkGradient" style="background-image: url('<?= $themeDirectory; ?>trashimages/hero1.jpg');" href="<?= homeDirectory(); ?>/philosophy">
                 <h2 class="menuSubitemTitle">FILOSOFÍA</h2>
               </a>
               <a class="menuSubitem darkGradient" style="background-image: url('<?= $themeDirectory; ?>trashimages/hero1.jpg');" href="#">
