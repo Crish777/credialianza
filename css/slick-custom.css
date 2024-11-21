@@ -13,23 +13,25 @@
    background-repeat: no-repeat;
    background-size: 20%;
  }
- 
+
  .slickContiner  .slick-next {
-   
    background-image: url(../images/slickRight.svg);
-   bottom: -115px;
+   bottom: 0px;
    top: unset;
    left: 50%;
+   right: unset;
    margin-left: 10px;
+   transform: translate(0px);
  }
  
  .slickContiner  .slick-prev {
-   background-image: url(../images/slickLeft.svg);
-   bottom: -115px;
-   top: unset;
-   right: 50%;
-   left: unset;
-   margin-right: 10px;
+  background-image: url(../images/slickLeft.svg);
+  bottom: 0px;
+  top: unset;
+  right: 50%;
+  left: unset;
+  margin-right: 10px;
+  transform: translate(0px);
  }
 
  .slickContiner  .slick-next::before {

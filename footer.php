@@ -7,7 +7,7 @@
 
     <div class="footerButtonSection">
       <a href="/" class="footerIconContainer">
-        <img class="headerIcon" src="<?= themeDirectory(); ?>images/topIcon.svg">
+        <img class="footerIcon" src="<?= themeDirectory(); ?>images/topIcon.svg">
       </a>
 
       <div class="footerButtonContainer">
@@ -24,10 +24,15 @@
         <a href="#" class="footerLink">Solicitudes</a>
       </div>
 
+      <div class="footerButtonContainerMobile">
+        <a href="#" class="footerButton"  style="background-image: url('<?= $themeDirectory; ?>images/faceIcon.svg'); background-size: 40%;"></a>
+        <a href="#" class="footerButton"  style="background-image: url('<?= $themeDirectory; ?>images/instaIcon.svg'); "></a>
+        <a href="#" class="footerButton"  style="background-image: url('<?= $themeDirectory; ?>images/linkIcon.svg'); background-size: 50%;"></a>
+      </div>
+
       <p class="footerLinkParagraph">©2024 CREDIALIANZA  / Políticas de privacidad / Términos y condiciones / Ver todas nuestras políticas</p>
 
-    </div>
-
+    </div>  
     
   </div>
 </footer>

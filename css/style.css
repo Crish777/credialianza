@@ -457,12 +457,16 @@ body {
   margin: 0;
 }
 
-.footerButtonContainer {
+.footerButtonContainer, .footerButtonContainerMobile {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   gap: 10px;
+}
+
+.footerButtonContainerMobile {
+  display: none;
 }
 
 .footerButton {
@@ -901,7 +905,10 @@ body {
   gap: 28px;
   flex-wrap: nowrap;
   margin: 0 auto;
-  margin-bottom: 186px;
+  /* position: relative; */
+  padding-bottom: 80px;
+  position: relative;
+  margin-bottom: 100px;
 }
 
 
@@ -1127,7 +1134,7 @@ body {
 .carouselContainer {
   width: 100%;
   display: flex;
-  margin: 360px 0 250px 0;
+  margin: 200px 0 200px 0;
 }
 
 .carouselContainer.lessMargin {
@@ -1138,11 +1145,12 @@ body {
   position: absolute;
   width: 100%;
   height: 300px;
-  margin-bottom: 100px;
+  /* margin-bottom: 100px; */
   overflow-x: hidden;
   width: 100%;
   right: 50%;
-  transform: translate(50%, -50%);
+  /* top: 50%; */
+  transform: translate(50%, 0%);
 }
 
 .carousel {
@@ -1394,7 +1402,7 @@ body {
 
   .siteMain {
     overflow-x: hidden;
-    width: 95%;
+    width: 90%;
   }
   
   .topMenu {
@@ -1448,7 +1456,7 @@ body {
     left: 0;
   }
 
-  .footerButtonContainer {
+  .footerButtonContainer, .footerButtonContainerMobile {
     right: 0;
   }
 
@@ -1516,6 +1524,32 @@ body {
     padding: 30px 20px;
   }
 
+  .formBottom {
+    flex-direction: column;
+    padding: 24px 5%; 
+    align-items: center;
+  }
+
+  .verticalLine {
+    width: 70%;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 1);
+    margin: 20px 0;
+  }
+  
+  .footerButtonContainer {
+    display: none;
+  }
+
+  .footerButtonContainerMobile {
+    display: flex;
+    margin-bottom: 20px;
+  }
+
+  .footerButtonSection {
+    justify-content: center;
+  }
+
 }
 
 @media only screen and (max-width: 1024px) {
@@ -1528,6 +1562,15 @@ body {
     height: 20px;
   }
 
+  .gradient-container::before,
+  .gradient-container::after  {
+    display: none;
+  }
+
+  .carouselContainer {
+    margin: 50px 0 50px 0;
+  }
+
    /* fonts */
 
    .heroTitle {
@@ -1535,7 +1578,7 @@ body {
    }
 
    .heroSubtitle {
-    font-size: 45px;
+    font-size: 30px;
   }
 
   .heroParagraph {
@@ -1543,20 +1586,19 @@ body {
   }
 
   .blueTitle {
-    text-align: center;
-    font-size: 45px;
+    font-size: 30px;
   }
 
   .dualParagraph {
-    font-size: 20px;
+    font-size: 18px;
   }
 
   .pannelTitle {
-    font-size: 52px;
+    font-size: 45px;
   }
 
   .pannelParagraph {
-    font-size: 20px;
+    font-size: 18px;
   }
 
   .pannelItemTitle {
@@ -1575,12 +1617,16 @@ body {
     font-size: 18px;
   }
 
+  .moreParagraph {
+    font-size: 18px;
+  }
+
   .formItemTitle {
     font-size: 18px;
   }
 
   .formItemInput {
-    font-size: 18px;
+    font-size: 16px;
     height: 30px;
   }
 
@@ -1601,7 +1647,7 @@ body {
   }
 
   .formHollowTitle {
-    font-size: 42px;
+    font-size: 30px;
     stroke-width: 1px;
     -webkit-text-stroke-color: #fff;
     -webkit-text-stroke-width: 1px;
@@ -1634,7 +1680,7 @@ body {
 
 @media only screen and (max-width: 768px) {
 
-  .headerIcon, .footerIcon {
+  .headerIcon {
     height: 32px;
   }
 
@@ -1660,7 +1706,7 @@ body {
   }
 
   
-  .heroContainer, .dualContainer, .pannelContainer, .carouselContainerAbsolute, .vualuesPannel  {
+  .heroContainer, .dualContainer, .pannelContainer, .vualuesPannel  {
     margin-bottom: 50px;
   }
 
@@ -1708,7 +1754,7 @@ body {
   }
 
   .pannelContainer.form {
-    padding: 70px 0 0 0;
+    padding: 30px 0 0 0;
     margin-bottom: 0;
   }
 
@@ -1721,20 +1767,8 @@ body {
   }
 
   .formItemTitle {
+    font: 16px;
     width: 100%;
-    text-align: center;
-  }
-
-  .formBottom {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .verticalLine {
-    width: 80%;
-    height: 1px;
-    background-color: rgba(255, 255, 255, 1);
-    margin: 20px 0;
   }
 
   .dualImage {
@@ -1743,7 +1777,7 @@ body {
   }
 
   .blueButton {
-    font-size: 20px;
+    font-size: 18px;
     height: 50px;
     padding: 0 32px;
   }
@@ -1810,7 +1844,41 @@ body {
     background: linear-gradient(180deg, #28B2A2 0%, #227FB3 100%);
   }
 
- 
+  .formBottom {
+    align-items: flex-start;
+  }
+
+  .formBottomSection {
+    align-items: flex-start;
+  }
+
+  .verticalLine {
+    width: 80%;
+  }
+
+  .carousel {
+    width: 1200px;
+  }
+
+  .carouselGroup {
+    gap: 20px;
+    animation: scrolling 8s linear infinite;
+  }
+
+  .carouselCard {
+    height: 100px;
+  }
+
+  .footerButtonSection {
+    justify-content: center;
+  }
+  
+  
+  .footerLinks {
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+  }
 }
 
 @media only screen and (max-width: 480px) {

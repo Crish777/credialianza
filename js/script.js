@@ -5,6 +5,7 @@ jQuery(document).ready(function($) {
   createVars();
   setListeners();
   //initAnimations();
+  adjustCarouselContainerHeight();
 });
 
 
@@ -115,3 +116,17 @@ function setListeners() {
     }
   });
 }
+
+function adjustCarouselContainerHeight() {
+  const carouselContainerAbsolute = document.querySelector('.carouselContainerAbsolute');
+  const carouselContainer = document.querySelector('.carouselContainer');
+
+  if (carouselContainerAbsolute && carouselContainer) {
+    const totalHeight = carouselContainerAbsolute.offsetHeight;
+    carouselContainer.style.height = `${totalHeight}px`;
+  }
+}
+
+adjustCarouselContainerHeight();
+
+window.addEventListener('resize', adjustCarouselContainerHeight);
