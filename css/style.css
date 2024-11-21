@@ -360,7 +360,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  padding: 20px 2.5% 50px 2.5%;
+  padding: 0px 2.5% 50px 2.5%;
 }
 
 .menuItem {
@@ -519,7 +519,7 @@ body {
 
 .heroContainer {
   position: relative;
-  height: 80vh;
+  height: 60vh;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -1440,7 +1440,7 @@ body {
     left: 0;
   }
 
-  .burgerImage.closeIcon {
+  .burgerImage.open {
     background-image: url(../images/close.svg);
   }
 

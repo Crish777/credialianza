@@ -90,11 +90,28 @@ function setListeners() {
     $(this).toggleClass('active');
   });
 
-  $(".menuItem").on("click", function () {
-    $(this).toggleClass("active");
+  $(".menuCategory").on("click", function (e) {
+    e.stopPropagation(); 
+    const $menuItem = $(this).closest(".menuItem"); //padre
+  
+
+    $(".menuItem").not($menuItem).removeClass("active");
+    $menuItem.toggleClass("active");
   });
 
   $(".burgerIcon").on("click", function () {
     $(".menuMobile").toggleClass("open");
+    $(".burgerImage").toggleClass("open");
+  
+    if ($(".siteHeader").hasClass("scrolling")) {
+
+      $(".siteHeader").removeClass("scrolling");
+      $(".burgerIcon").data("removedscrolling", true);
+
+    } else if ($(".burgerIcon").data("removedscrolling")) {
+
+      $(".siteHeader").addClass("scrolling");
+      $(".burgerIcon").data("removedscrolling", false);
+    }
   });
 }
