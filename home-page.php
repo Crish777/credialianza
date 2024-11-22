@@ -46,11 +46,13 @@
     <div style="background-image: url('<?= $themeDirectory; ?>trashimages/dual1.jpg');" class="dualImage" data-aos="fade-up"  data-aos-duration="700"></div>
   </div>
       
-  <div class="pannelContainer" style="background-image: url('<?= $themeDirectory; ?>trashimages/pannel1.jpg');"  data-aos="fade-up"  data-aos-duration="700">
-    <h2 class="pannelTitle">NUESTROS</br>
-      <strong>SERVICIOS</strong> 
-    </h2>
-
+  <div class="pannelContainer " style="background-image: url('<?= $themeDirectory; ?>trashimages/pannel1.jpg');"  data-aos="fade-up"  data-aos-duration="700">
+    <div class="pannelTitleContainer">
+      <h2 class="pannelTitle shadow">NUESTROS</br>
+        <strong>SERVICIOS</strong> 
+      </h2>
+    </div>
+    
     <div class="panelItemContainer">
 
       <div class="pannelItem">
@@ -302,7 +304,7 @@
   <div class="carouselContainer">
       <div class="carouselContainerAbsolute"> 
     
-        <h2 class="blueTitle centered">
+        <h2 class="blueTitle centered carouselSlick">
             Nuestros </br>
             <strong>Aliados</strong>
         </h2>
