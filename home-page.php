@@ -24,7 +24,7 @@
 
   <div class="dualContainer">
     <div class="dualTextConatiner">
-      <h2 class="blueTitle" data-aos="fade-left"  data-aos-duration="500">
+      <h2 class="blueTitle"  >
         Credialianza es una empresa con </br>
         <strong>amplia experiencia</strong>
       </h2>

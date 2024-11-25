@@ -71,13 +71,12 @@ function createVars() {
 }
 
 function setListeners() {
-
+  // Scrolling 
   window.addEventListener("resize", () => {});
 
   window.addEventListener("scroll", () => {
-    // Verifica si el menú está abierto
     if (document.querySelector(".menuMobile").classList.contains("open")) {
-      return; // No ejecuta la lógica del scroll si el menú está abierto
+      return;
     }
   
     if (window.scrollY > 100) {
@@ -132,3 +131,27 @@ function adjustCarouselContainerHeight() {
 adjustCarouselContainerHeight();
 
 window.addEventListener('resize', adjustCarouselContainerHeight);
+
+// Cambio input PDF
+document.querySelectorAll('.formInput').forEach((formInput) => {
+  const fileInput = formInput.querySelector('.formInputFile');
+  const fileInfo = formInput.querySelector('.fileInfo');
+  const fileNameDisplay = formInput.querySelector('.fileName');
+  const removeFileBtn = formInput.querySelector('.removeFile');
+  const iconContainer = formInput.querySelector('.formInputIconContainer');
+
+
+  fileInput.addEventListener('change', (event) => {
+    const file = event.target.files[0];
+    if (file) {
+      fileNameDisplay.textContent = file.name;
+      fileInfo.style.display = 'flex';
+      iconContainer.style.display = 'none';
+    }
+  });
+  removeFileBtn.addEventListener('click', () => {
+    fileInput.value = ''; 
+    fileInfo.style.display = 'none';
+    iconContainer.style.display = 'flex';
+  });
+});
