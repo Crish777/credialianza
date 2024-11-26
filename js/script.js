@@ -92,35 +92,30 @@ function setListeners() {
   });
   
   $(".burgerIcon").on("click", function (e) {
-    e.preventDefault(); // Previene el comportamiento predeterminado
+    e.preventDefault(); 
   
     const $checkbox = $("#toggle");
     const $menuMobile = $(".menuMobile");
     const $siteHeader = $(".siteHeader");
   
-    // Alternar el estado del checkbox manualmente
     const isChecked = !$checkbox.prop("checked");
     $checkbox.prop("checked", isChecked);
   
-    // Agregar o quitar la clase "open" en el menú móvil
     if (isChecked) {
       $menuMobile.addClass("open");
     } else {
       $menuMobile.removeClass("open");
     }
   
-    // Manejar la clase "scrolling" en el siteHeader
     if (isChecked) {
-      // Al abrir el menú, eliminar "scrolling" si ya está presente
       if ($siteHeader.hasClass("scrolling")) {
         $siteHeader.removeClass("scrolling");
-        $(".burgerIcon").data("removedscrolling", true); // Guardar que fue eliminado
+        $(".burgerIcon").data("removedscrolling", true); 
       }
     } else {
-      // Al cerrar el menú, restaurar "scrolling" si fue eliminado anteriormente
       if ($(".burgerIcon").data("removedscrolling")) {
         $siteHeader.addClass("scrolling");
-        $(".burgerIcon").data("removedscrolling", false); // Resetear el flag
+        $(".burgerIcon").data("removedscrolling", false);
       }
     }
   });
