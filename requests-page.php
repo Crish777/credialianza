@@ -11,7 +11,7 @@
 <main class="siteMain">
 
   <div class="heromask">
-    <div class="heroContainer darkGradient" style="background-image: url('<?= $themeDirectory; ?>trashimages/hero1.jpg');">
+    <div class="heroContainer darkGradientHero" style="background-image: url('<?= $themeDirectory; ?>trashimages/hero1.jpg');">
       <div class="heroText textBottom">
         <h2 class="heroTitle">
           SOLICITUDES 
@@ -23,10 +23,10 @@
       </div>
     </div>
     <div class="heroMaskBottom">
-      <a class="maskItem" href="#">Solicita tu crédito</a>
-      <a class="maskItem" href="#">Extracto actual</a>
-      <a class="maskItem" href="#">Paz y salvo</a>
-      <a class="maskItem" href="#">Certificado de deuda</a>
+      <a class="maskItem" href="<?= homeDirectory(); ?>/">Solicita tu crédito</a>
+      <a class="maskItem" href="<?= homeDirectory(); ?>/">Extracto actual</a>
+      <a class="maskItem" href="<?= homeDirectory(); ?>/">Paz y salvo</a>
+      <a class="maskItem" href="<?= homeDirectory(); ?>/">Certificado de deuda</a>
     </div>
   </div>
 

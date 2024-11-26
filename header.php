@@ -25,7 +25,7 @@ $homeDirectory = homeDirectory();
       <div class="headerContent">
 
         <div class="headerButtonSection">
-          <a href="/" class="headerIconContainer">
+          <a href="<?= homeDirectory(); ?>/" class="headerIconContainer">
             <img class="headerIcon" src="<?= themeDirectory(); ?>images/topIcon.svg">
           </a>
           <div class="sideTopButtons">
@@ -33,7 +33,13 @@ $homeDirectory = homeDirectory();
               <div class="headphoneImage"></div>
             </button>
             <button class="burgerIcon">
-              <div class="burgerImage"></div>
+              <!--div class="burgerImage"></div-->
+              <input type="checkbox" id="toggle">
+              <label class="checkbox" for="toggle">
+                <div class="trace"></div>
+                <div class="trace"></div>
+                <div class="trace"></div>
+              </label>
             </button>
           </div>
           
@@ -43,21 +49,21 @@ $homeDirectory = homeDirectory();
         <div class="topMenu">
           <!-- nosotros-->
           <div class="itemMenuContainer"> 
-            <a class="itemMenu" href="#">
+            <div class="itemMenu" >
               <span class="itemMenuText"> Nosotros </span>
               <img class="itemMenuArrow" src="<?= themeDirectory(); ?>images/arrowdown.svg">
-            </a>
+            </div>
             <div class="dropdownMenu">
               <a class="menuSubitem darkGradient" style="background-image: url('<?= $themeDirectory; ?>trashimages/hero1.jpg');" href="<?= homeDirectory(); ?>/philosophy">
                 <h2 class="menuSubitemTitle">FILOSOFÍA</h2>
               </a>
-              <a class="menuSubitem darkGradient" style="background-image: url('<?= $themeDirectory; ?>trashimages/hero1.jpg');" href="#">
-                <h2 class="menuSubitemTitle">VALORES</h2>
+              <a class="menuSubitem darkGradient" style="background-image: url('<?= $themeDirectory; ?>trashimages/hero1.jpg');" href="<?= homeDirectory(); ?>/requests">
+                <h2 class="menuSubitemTitle">SOLICITUDES</h2>
               </a>
-              <a class="menuSubitem darkGradient" style="background-image: url('<?= $themeDirectory; ?>trashimages/hero1.jpg');" href="#">
-                <h2 class="menuSubitemTitle">¿DONDE NOS ENCONTRAMOS?</h2>
+              <a class="menuSubitem darkGradient" style="background-image: url('<?= $themeDirectory; ?>trashimages/hero1.jpg');" href="<?= homeDirectory(); ?>/credit-page">
+                <h2 class="menuSubitemTitle">CREDITO DE LIBRANZA</h2>
               </a>
-              <a class="menuSubitem darkGradient" style="background-image: url('<?= $themeDirectory; ?>trashimages/hero1.jpg');" href="#">
+              <a class="menuSubitem darkGradient" style="background-image: url('<?= $themeDirectory; ?>trashimages/hero1.jpg');" href="<?= homeDirectory(); ?>/">
                 <h2 class="menuSubitemTitle">NUESTRAS POLÍTICAS</h2>
               </a>
             </div>
@@ -65,21 +71,21 @@ $homeDirectory = homeDirectory();
 
           <!-- Crédito de libranza-->
           <div class="itemMenuContainer"> 
-            <a class="itemMenu" href="#">
+            <div class="itemMenu">
               <span class="itemMenuText"> Crédito de libranza </span>
               <img class="itemMenuArrow" src="<?= themeDirectory(); ?>images/arrowdown.svg">
-            </a>
+            </div>
             <div class="dropdownMenu">
-              <a class="menuSubitem darkGradient" style="background-image: url('<?= $themeDirectory; ?>trashimages/hero1.jpg');" href="#">
+              <a class="menuSubitem darkGradient" style="background-image: url('<?= $themeDirectory; ?>trashimages/hero1.jpg');"href="<?= homeDirectory(); ?>/">
                 <h2 class="menuSubitemTitle">FILOSOFÍA</h2>
               </a>
-              <a class="menuSubitem darkGradient" style="background-image: url('<?= $themeDirectory; ?>trashimages/hero1.jpg');" href="#">
+              <a class="menuSubitem darkGradient" style="background-image: url('<?= $themeDirectory; ?>trashimages/hero1.jpg');"href="<?= homeDirectory(); ?>/">
                 <h2 class="menuSubitemTitle">VALORES</h2>
               </a>
-              <a class="menuSubitem darkGradient" style="background-image: url('<?= $themeDirectory; ?>trashimages/hero1.jpg');" href="#">
+              <a class="menuSubitem darkGradient" style="background-image: url('<?= $themeDirectory; ?>trashimages/hero1.jpg');"href="<?= homeDirectory(); ?>/">
                 <h2 class="menuSubitemTitle">¿DONDE NOS ENCONTRAMOS?</h2>
               </a>
-              <a class="menuSubitem darkGradient" style="background-image: url('<?= $themeDirectory; ?>trashimages/hero1.jpg');" href="#">
+              <a class="menuSubitem darkGradient" style="background-image: url('<?= $themeDirectory; ?>trashimages/hero1.jpg');"href="<?= homeDirectory(); ?>/">
                 <h2 class="menuSubitemTitle">NUESTRAS POLÍTICAS</h2>
               </a>
             </div>
@@ -87,21 +93,21 @@ $homeDirectory = homeDirectory();
 
           <!-- Solicitudes-->
           <div class="itemMenuContainer"> 
-            <a class="itemMenu" href="#">
+            <div class="itemMenu">
               <span class="itemMenuText"> Solicitudes </span>
               <img class="itemMenuArrow" src="<?= themeDirectory(); ?>images/arrowdown.svg">
-            </a>
+            </div>
             <div class="dropdownMenu">
-              <a class="menuSubitem darkGradient" style="background-image: url('<?= $themeDirectory; ?>trashimages/hero1.jpg');" href="#">
+              <a class="menuSubitem darkGradient" style="background-image: url('<?= $themeDirectory; ?>trashimages/hero1.jpg');"href="<?= homeDirectory(); ?>/">
                 <h2 class="menuSubitemTitle">FILOSOFÍA</h2>
               </a>
-              <a class="menuSubitem darkGradient" style="background-image: url('<?= $themeDirectory; ?>trashimages/hero1.jpg');" href="#">
+              <a class="menuSubitem darkGradient" style="background-image: url('<?= $themeDirectory; ?>trashimages/hero1.jpg');"href="<?= homeDirectory(); ?>/">
                 <h2 class="menuSubitemTitle">VALORES</h2>
               </a>
-              <a class="menuSubitem darkGradient" style="background-image: url('<?= $themeDirectory; ?>trashimages/hero1.jpg');" href="#">
+              <a class="menuSubitem darkGradient" style="background-image: url('<?= $themeDirectory; ?>trashimages/hero1.jpg');"href="<?= homeDirectory(); ?>/">
                 <h2 class="menuSubitemTitle">¿DONDE NOS ENCONTRAMOS?</h2>
               </a>
-              <a class="menuSubitem darkGradient" style="background-image: url('<?= $themeDirectory; ?>trashimages/hero1.jpg');" href="#">
+              <a class="menuSubitem darkGradient" style="background-image: url('<?= $themeDirectory; ?>trashimages/hero1.jpg');"href="<?= homeDirectory(); ?>/">
                 <h2 class="menuSubitemTitle">NUESTRAS POLÍTICAS</h2>
               </a>
             </div>
@@ -123,16 +129,16 @@ $homeDirectory = homeDirectory();
               <img class="mobileMenuArrow" src="<?= themeDirectory(); ?>images/arrowdown.svg">
             </div>
             <div class="menuSubitemsContainer">
-            <a class="menuSubitem darkGradient" style="background-image: url('<?= $themeDirectory; ?>trashimages/hero1.jpg');" href="#">
+              <a class="menuSubitem darkGradient" style="background-image: url('<?= $themeDirectory; ?>trashimages/hero1.jpg');" href="<?= homeDirectory(); ?>/philosophy">
                 <h2 class="menuSubitemTitle">FILOSOFÍA</h2>
               </a>
-              <a class="menuSubitem darkGradient" style="background-image: url('<?= $themeDirectory; ?>trashimages/hero1.jpg');" href="#">
-                <h2 class="menuSubitemTitle">VALORES</h2>
+              <a class="menuSubitem darkGradient" style="background-image: url('<?= $themeDirectory; ?>trashimages/hero1.jpg');" href="<?= homeDirectory(); ?>/requests">
+                <h2 class="menuSubitemTitle">SOLICITUDES</h2>
               </a>
-              <a class="menuSubitem darkGradient" style="background-image: url('<?= $themeDirectory; ?>trashimages/hero1.jpg');" href="#">
-                <h2 class="menuSubitemTitle">¿DONDE NOS ENCONTRAMOS?</h2>
+              <a class="menuSubitem darkGradient" style="background-image: url('<?= $themeDirectory; ?>trashimages/hero1.jpg');" href="<?= homeDirectory(); ?>/credit-page">
+                <h2 class="menuSubitemTitle">CREDITO DE LIBRANZA</h2>
               </a>
-              <a class="menuSubitem darkGradient" style="background-image: url('<?= $themeDirectory; ?>trashimages/hero1.jpg');" href="#">
+              <a class="menuSubitem darkGradient" style="background-image: url('<?= $themeDirectory; ?>trashimages/hero1.jpg');"href="<?= homeDirectory(); ?>/">
                 <h2 class="menuSubitemTitle">NUESTRAS POLÍTICAS</h2>
               </a>
             </div>
@@ -144,16 +150,16 @@ $homeDirectory = homeDirectory();
               <img class="mobileMenuArrow" src="<?= themeDirectory(); ?>images/arrowdown.svg">
             </div>
             <div class="menuSubitemsContainer">
-            <a class="menuSubitem darkGradient" style="background-image: url('<?= $themeDirectory; ?>trashimages/hero1.jpg');" href="#">
+            <a class="menuSubitem darkGradient" style="background-image: url('<?= $themeDirectory; ?>trashimages/hero1.jpg');"href="<?= homeDirectory(); ?>/">
                 <h2 class="menuSubitemTitle">FILOSOFÍA</h2>
               </a>
-              <a class="menuSubitem darkGradient" style="background-image: url('<?= $themeDirectory; ?>trashimages/hero1.jpg');" href="#">
+              <a class="menuSubitem darkGradient" style="background-image: url('<?= $themeDirectory; ?>trashimages/hero1.jpg');"href="<?= homeDirectory(); ?>/">
                 <h2 class="menuSubitemTitle">VALORES</h2>
               </a>
-              <a class="menuSubitem darkGradient" style="background-image: url('<?= $themeDirectory; ?>trashimages/hero1.jpg');" href="#">
+              <a class="menuSubitem darkGradient" style="background-image: url('<?= $themeDirectory; ?>trashimages/hero1.jpg');"href="<?= homeDirectory(); ?>/">
                 <h2 class="menuSubitemTitle">¿DONDE NOS ENCONTRAMOS?</h2>
               </a>
-              <a class="menuSubitem darkGradient" style="background-image: url('<?= $themeDirectory; ?>trashimages/hero1.jpg');" href="#">
+              <a class="menuSubitem darkGradient" style="background-image: url('<?= $themeDirectory; ?>trashimages/hero1.jpg');"href="<?= homeDirectory(); ?>/">
                 <h2 class="menuSubitemTitle">NUESTRAS POLÍTICAS</h2>
               </a>
              </div>
@@ -166,16 +172,16 @@ $homeDirectory = homeDirectory();
               
             </div>
             <div class="menuSubitemsContainer">
-            <a class="menuSubitem darkGradient" style="background-image: url('<?= $themeDirectory; ?>trashimages/hero1.jpg');" href="#">
+            <a class="menuSubitem darkGradient" style="background-image: url('<?= $themeDirectory; ?>trashimages/hero1.jpg');"href="<?= homeDirectory(); ?>/">
                 <h2 class="menuSubitemTitle">FILOSOFÍA</h2>
               </a>
-              <a class="menuSubitem darkGradient" style="background-image: url('<?= $themeDirectory; ?>trashimages/hero1.jpg');" href="#">
+              <a class="menuSubitem darkGradient" style="background-image: url('<?= $themeDirectory; ?>trashimages/hero1.jpg');"href="<?= homeDirectory(); ?>/">
                 <h2 class="menuSubitemTitle">VALORES</h2>
               </a>
-              <a class="menuSubitem darkGradient" style="background-image: url('<?= $themeDirectory; ?>trashimages/hero1.jpg');" href="#">
+              <a class="menuSubitem darkGradient" style="background-image: url('<?= $themeDirectory; ?>trashimages/hero1.jpg');"href="<?= homeDirectory(); ?>/">
                 <h2 class="menuSubitemTitle">¿DONDE NOS ENCONTRAMOS?</h2>
               </a>
-              <a class="menuSubitem darkGradient" style="background-image: url('<?= $themeDirectory; ?>trashimages/hero1.jpg');" href="#">
+              <a class="menuSubitem darkGradient" style="background-image: url('<?= $themeDirectory; ?>trashimages/hero1.jpg');"href="<?= homeDirectory(); ?>/">
                 <h2 class="menuSubitemTitle">NUESTRAS POLÍTICAS</h2>
               </a>
             </div>

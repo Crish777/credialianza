@@ -125,18 +125,18 @@
   <div class="dualContainer inversed">
     <div class="dualTextConatiner">
       <ul class="dualList">
-        <li>No se tiene que preocupar por hacer el pago de su cuota. Es su entidad pagadora la encargada de realizar el descuento de su pensión para el pago de las cuotas del crédito adquirido.</li>
-        <li>Facilidad para renovar su crédito. Una vez cuente con las condiciones requeridas, avanzando con sus pagos, podemos tramitar con facilidad la renovación de la deuda.</li>
-        <li>Documentación mínima y tiempos de respuesta ágiles.</li>
-        <li>Acceso a montos hasta $130.000.000.</li>
-        <li>Tasas competitivas.</li>
-        <li>Cuotas y tasas fijas durante la vigencia del crédito.</li>
-        <li>Facilidad de plazos hasta 144 meses.</li>
-        <li>Podrá elegir el uso que le quiera dar al crédito.</li>
-        <li>Facilidad para el pago de la deuda.</li>
-        <li>Sin aportes ni afiliaciones.</li>
-        <li>Atención personalizada a través de asesores comerciales capacitados.</li>
-        <li>Flexibilidad en el estudio de Data Crédito.</li>
+        <li data-aos="fade-left"  data-aos-duration="4000">No se tiene que preocupar por hacer el pago de su cuota. Es su entidad pagadora la encargada de realizar el descuento de su pensión para el pago de las cuotas del crédito adquirido.</li>
+        <li data-aos="fade-left"  data-aos-duration="4000">Facilidad para renovar su crédito. Una vez cuente con las condiciones requeridas, avanzando con sus pagos, podemos tramitar con facilidad la renovación de la deuda.</li>
+        <li data-aos="fade-left"  data-aos-duration="4000">Documentación mínima y tiempos de respuesta ágiles.</li>
+        <li data-aos="fade-left"  data-aos-duration="4000">Acceso a montos hasta $130.000.000.</li>
+        <li data-aos="fade-left"  data-aos-duration="4000">Tasas competitivas.</li>
+        <li data-aos="fade-left"  data-aos-duration="4000">Cuotas y tasas fijas durante la vigencia del crédito.</li>
+        <li data-aos="fade-left"  data-aos-duration="4000">Facilidad de plazos hasta 144 meses.</li>
+        <li data-aos="fade-left"  data-aos-duration="4000">Podrá elegir el uso que le quiera dar al crédito.</li>
+        <li data-aos="fade-left"  data-aos-duration="4000">Facilidad para el pago de la deuda.</li>
+        <li data-aos="fade-left"  data-aos-duration="4000">Sin aportes ni afiliaciones.</li>
+        <li data-aos="fade-left"  data-aos-duration="4000">Atención personalizada a través de asesores comerciales capacitados.</li>
+        <li data-aos="fade-left"  data-aos-duration="4000">Flexibilidad en el estudio de Data Crédito.</li>
       </ul>
     </div>
 
