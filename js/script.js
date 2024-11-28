@@ -171,3 +171,27 @@ document.querySelectorAll('.formInput').forEach((formInput) => {
     iconContainer.style.display = 'flex';
   });
 });
+
+/*
+function adjustJobCardSizes() {
+    const jobCards = document.querySelectorAll('.jobCardBox');
+
+    let maxHeight = 0;
+
+    jobCards.forEach(card => {
+        const maskText = card.querySelector('.jobCardMaskText');
+        if (maskText) {
+            const height = maskText.offsetHeight;
+            if (height > maxHeight) {
+                maxHeight = height;
+            }
+        }
+    });
+
+    jobCards.forEach(card => {
+        card.style.height = `${maxHeight}px`;
+    });
+}
+
+window.addEventListener('load', adjustJobCardSizes);
+*/

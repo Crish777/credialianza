@@ -45,6 +45,193 @@
     </div>
     <div style="background-image: url('<?= $themeDirectory; ?>trashimages/dual1.jpg');" class="dualImage" data-aos="fade-up"  data-aos-duration="700"></div>
   </div>
+
+  <div class="jobCardsContainer">
+
+    <div class="jobCardBox">
+      <div class="jobCardFront darkGradientRounded"  style="background-image: url('<?= $themeDirectory; ?>trashimages/hero1.jpg');">
+        <h2 class="jobCardFrontTitle">Pensionados</h2>
+      </div>
+
+      <div class="jobCardMask" style="background-image: url('<?= $themeDirectory; ?>trashimages/card1.jpg');">
+
+        <div class="jobCardMaskText">
+
+          <h3 class="jobCardMaskTitle">
+            Empleados </br>
+            <strong>Públicos</strong> 
+          </h3>
+
+          <div class="jobCardItem">
+            <img src="<?= themeDirectory(); ?>images/calendaricon1.svg" class="jobCardIcon">
+            <h4 class="jobCardItemTitle">
+            <strong>EDAD</strong>    
+            </h4>
+            <p class="jobCardItemParagraph">
+            Hasta 57 años para mujeres y </br>
+            hasta 62 años para hombres
+            </p>
+          </div>
+
+          <span class="jobCardSeparator"></span>
+
+          <div class="jobCardItem">
+            <img src="<?= themeDirectory(); ?>images/calendaricon1.svg" class="jobCardIcon">
+            <h4 class="jobCardItemTitle">
+            PLAZOS <strong>OTORGADOS</strong>  
+            </h4>
+            <p class="jobCardItemParagraph">
+            Hasta 144 meses
+            </p>
+          </div>
+
+          <span class="jobCardSeparator"></span>
+
+          <div class="jobCardItem">
+            <img src="<?= themeDirectory(); ?>images/calendaricon1.svg" class="jobCardIcon">
+            <h4 class="jobCardItemTitle">
+              <strong>MONTOS</strong>    
+            </h4>
+            <p class="jobCardItemParagraph">
+            Desde 1 millón hasta $140 millones
+            </p>
+          </div>
+
+          <button class="blueButton">
+            Nuestros servicios
+            <img src="<?= themeDirectory(); ?>images/arrowbutton.svg" class="buttonArrow">
+          </button>
+
+
+        </div>
+
+      </div>
+      
+    </div>
+
+    <div class="jobCardBox">
+      <div class="jobCardFront darkGradientRounded"  style="background-image: url('<?= $themeDirectory; ?>trashimages/hero1.jpg');">
+        <h2 class="jobCardFrontTitle">Pensionados</h2>
+      </div>
+
+      <div class="jobCardMask" style="background-image: url('<?= $themeDirectory; ?>trashimages/card1.jpg');">
+
+        <div class="jobCardMaskText">
+
+          <h3 class="jobCardMaskTitle">
+            Empleados </br>
+            <strong>Públicos</strong> 
+          </h3>
+
+          <div class="jobCardItem">
+            <img src="<?= themeDirectory(); ?>images/calendaricon1.svg" class="jobCardIcon">
+            <h4 class="jobCardItemTitle">
+            <strong>EDAD</strong>    
+            </h4>
+            <p class="jobCardItemParagraph">
+            Hasta 57 años para mujeres y </br>
+            hasta 62 años para hombres
+            </p>
+          </div>
+
+          <span class="jobCardSeparator"></span>
+
+          <div class="jobCardItem">
+            <img src="<?= themeDirectory(); ?>images/calendaricon1.svg" class="jobCardIcon">
+            <h4 class="jobCardItemTitle">
+            PLAZOS <strong>OTORGADOS</strong>  
+            </h4>
+            <p class="jobCardItemParagraph">
+            Hasta 144 meses
+            </p>
+          </div>
+
+          <span class="jobCardSeparator"></span>
+
+          <div class="jobCardItem">
+            <img src="<?= themeDirectory(); ?>images/calendaricon1.svg" class="jobCardIcon">
+            <h4 class="jobCardItemTitle">
+              <strong>MONTOS</strong>    
+            </h4>
+            <p class="jobCardItemParagraph">
+            Desde 1 millón hasta $140 millones
+            </p>
+          </div>
+
+          <button class="blueButton">
+            Nuestros servicios
+            <img src="<?= themeDirectory(); ?>images/arrowbutton.svg" class="buttonArrow">
+          </button>
+
+
+        </div>
+
+      </div>
+      
+    </div>
+
+    <div class="jobCardBox">
+      <div class="jobCardFront darkGradientRounded"  style="background-image: url('<?= $themeDirectory; ?>trashimages/hero1.jpg');">
+        <h2 class="jobCardFrontTitle">Pensionados</h2>
+      </div>
+
+      <div class="jobCardMask" style="background-image: url('<?= $themeDirectory; ?>trashimages/card1.jpg');">
+
+        <div class="jobCardMaskText">
+
+          <h3 class="jobCardMaskTitle">
+            Empleados </br>
+            <strong>Públicos</strong> 
+          </h3>
+
+          <div class="jobCardItem">
+            <img src="<?= themeDirectory(); ?>images/calendaricon1.svg" class="jobCardIcon">
+            <h4 class="jobCardItemTitle">
+            <strong>EDAD</strong>    
+            </h4>
+            <p class="jobCardItemParagraph">
+            Hasta 57 años para mujeres y </br>
+            hasta 62 años para hombres
+            </p>
+          </div>
+
+          <span class="jobCardSeparator"></span>
+
+          <div class="jobCardItem">
+            <img src="<?= themeDirectory(); ?>images/calendaricon1.svg" class="jobCardIcon">
+            <h4 class="jobCardItemTitle">
+            PLAZOS <strong>OTORGADOS</strong>  
+            </h4>
+            <p class="jobCardItemParagraph">
+            Hasta 144 meses
+            </p>
+          </div>
+
+          <span class="jobCardSeparator"></span>
+
+          <div class="jobCardItem">
+            <img src="<?= themeDirectory(); ?>images/calendaricon1.svg" class="jobCardIcon">
+            <h4 class="jobCardItemTitle">
+              <strong>MONTOS</strong>    
+            </h4>
+            <p class="jobCardItemParagraph">
+            Desde 1 millón hasta $140 millones
+            </p>
+          </div>
+
+          <button class="blueButton">
+            Nuestros servicios
+            <img src="<?= themeDirectory(); ?>images/arrowbutton.svg" class="buttonArrow">
+          </button>
+
+
+        </div>
+
+      </div>
+      
+    </div>
+
+  </div>
       
   <div class="pannelContainer " style="background-image: url('<?= $themeDirectory; ?>trashimages/pannel1.jpg');"  data-aos="fade-up"  data-aos-duration="700">
     <div class="pannelTitleContainer">

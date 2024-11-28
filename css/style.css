@@ -731,6 +731,160 @@ body {
   padding-top: 40px;
 }
 
+.jobCardsContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 50px;
+}
+
+.jobCardBox {
+  position: relative;
+  width: calc(100% / 3 - 10px);
+}
+
+.jobCardFront {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 10px;
+  min-height: 1024px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.jobCardFrontTitle {
+  position: absolute;
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 1.3;
+  color: rgba(255, 255, 255, 1);
+  text-align: center;
+  bottom:  50px;
+  right: 50%;
+  transform: translateX(50%);
+  z-index: 2;
+} 
+
+.jobCardMask {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top:0;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 10px;
+  min-height: 1024px;
+  opacity: 0;
+  transition: all 0.4s ease;
+  z-index: 3;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.jobCardMask::after {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 30px;
+}
+
+.jobCardBox:hover .jobCardMask {
+  opacity: 1;
+}
+
+.jobCardMaskText {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  z-index: 4;
+  height: fit-content;
+  padding: 50px 10px;
+}
+
+.jobCardMaskText .jobCardItem:nth-last-of-type(1) {
+  margin-bottom: 50px;
+}
+
+.jobCardMaskTitle {
+  font-size: 60px;
+  font-weight: 300;
+  line-height: 1.1;
+  text-align: center;
+  color: rgba(34, 131, 178, 1);
+  margin-bottom: 84px;
+
+  strong {
+    font-weight: 700;
+  }
+}
+
+.jobCardIcon {
+  height: 49px;
+  margin-bottom: 8px;
+}
+
+.jobCardItem {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.jobCardItemTitle {
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 1;
+  margin-bottom: 14px;
+  color: rgba(36, 141, 174, 1);
+  margin-bottom: 14px;
+
+  strong {
+    color: rgba(36, 141, 174, 1);
+    font-weight: 700;
+  }
+}
+
+.jobCardItemParagraph {
+  font-size: 22px;
+  font-weight: 300;
+  line-height: 1.2;
+  color: rgba(35, 35, 35, 1);
+  text-align: center;
+  margin-bottom: 14px;
+}
+
+.jobCardSeparator {
+  width: 230px;
+  height: 2px;
+  background: linear-gradient(180deg, #00A99C 0%, #0081B9 100%);
+  margin: 22px 0;
+}
+
 .blueTitle {
   width: 100%;
   font-size: 65px;
@@ -1527,6 +1681,19 @@ body {
   background: linear-gradient(0deg, rgba(35, 35, 35, 0.7) 5.79%, rgba(35, 35, 35, 0.639732) 19.53%, rgba(35, 35, 35, 0.577027) 32.51%, rgba(35, 35, 35, 0) 94.35%);
 }
 
+.darkGradientRounded::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  height: 50%;
+  width: 100%;
+  left: 0;
+  border-radius: 30px;
+  z-index: 1;
+  background: linear-gradient(0deg, rgba(35, 35, 35, 0.7) 5.79%, rgba(35, 35, 35, 0.639732) 19.53%, rgba(35, 35, 35, 0.577027) 32.51%, rgba(35, 35, 35, 0) 94.35%);
+  border-radius: 30px;
+}
+
 .darkGradientHero::after {
   content: '';
   position: absolute;
@@ -1871,6 +2038,12 @@ body {
     right: 0;
   }
 
+  /*fonts*/
+
+  .jobCardFrontTitle {
+    font-size: 42px;
+  }
+
 }
 
 @media only screen and (max-width: 1200px) {
@@ -2011,6 +2184,15 @@ body {
     background: rgba(255, 255, 255, 1);
   }
   */
+
+  .jobCardsContainer{
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+  .jobCardBox {
+    width: 100%;
+  }
+
 }
 
 @media only screen and (max-width: 1024px) {
@@ -2071,6 +2253,10 @@ body {
 
   .maskItem {
     height: 70px;
+  }
+
+  .jobCardSeparator {
+    margin: 8px 0;
   }
 
    /* fonts */
@@ -2203,6 +2389,24 @@ body {
   .formInputTitle {
     font-size: 16px;
   }
+
+  .jobCardMaskTitle {
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+
+  .jobCardMaskParagraph {
+    font-size: 18px;
+  }
+
+  .jobCardFrontTitle {
+    font-size: 30px;
+  }
+
+  .jobCardFrontParagraph {
+    font-size: 18px;
+  }
+
 }
 
 @media only screen and (max-width: 768px) {
