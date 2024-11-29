@@ -63,16 +63,11 @@
       
       <div class="marker" data-id="0" data-lat="4.6648223" data-lng="-74.05148650000001">
         <div class="markerContent">
-          <h3 class="markerTitle subtitle orange boldTitle">
-            Av. 82
-          </h3>
-          <h4 class="markerText singleContent">
-            <p><strong>Avenida 82 #9 &#8211; 24</strong></p>
-            <p><em>Lunes a Sábado:</em></p>
-            <p>10 am a 8 pm</p>
-            <p><em>Domingo y Festivos:</em></p>
-            <p>10:30 am a 6:30 pm</p>
-          </h4>
+          <div class="markerText singleContent">
+            <h2 class="markerTitle">Calle 49 #50-21</h2>
+            <h3 class="markSubtitle">Oficina 1006</h3>
+            <h4 class="markName">Ed. El Café</h4>
+          </div>
           <a class="btnStoreGoogleMaps" href="https://maps.app.goo.gl/LX2eGnfP72WKuyGz7" target="_blank">Ver en Google Maps</a>
           <style>
             .btnStoreGoogleMaps {
@@ -450,13 +445,6 @@
   </div>
 
 </main>
-
-<script type="text/javascript">
-				
-	hasMap = true;
-		
-</script>
-
 
 <?php 
 

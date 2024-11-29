@@ -1898,6 +1898,53 @@ body {
   margin-bottom: 50px;
 }
 
+.mapContainer {
+  width:70%;
+float:left;
+position:relative;
+height:500px;
+}
+
+.markerContent {
+  border-radius: 20px !important;
+  padding: 20px 15px !important;
+}
+
+.markerText {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.markerTitle {
+  width: 100%;
+font-size: 16px;
+font-weight: 700;
+line-height: 1;
+color: rgba(35, 35, 35, 1);
+text-align: left;
+}
+
+.markSubtitle {
+  width: 100%;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.1;
+  color: rgba(35, 35, 35, 0.6);
+  margin-bottom: 10px;
+}
+
+.markName {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1;
+  color: rgba(35, 35, 35, 1);
+  text-align: left;
+  margin-bottom: 10px;
+}
+
 .listContainer {
   width: 30%;
   display: flex;
