@@ -10,6 +10,7 @@
 <link rel="stylesheet" href="<?= themeDirectory()?>css/aos.css">
 <link rel="stylesheet" type="text/css" href="<?= themeDirectory(); ?>css/slick-theme.css"/>
 <link rel="stylesheet" href="<?php echo themeDirectory(); ?>css/fonts.css" />
+<link rel="stylesheet" href="<?php echo themeDirectory(); ?>css/map.css" />
 <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
 <link rel="stylesheet" href="<?php echo themeDirectory(); ?>css/slick-custom.css" />
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">

@@ -1,3 +1,13 @@
+var screenWidth, screenHeight, hasMap = true, tpURL = "";
+var mapsIcon, mapPortion;
+
+var mapContainer, listContainer;
+
+var totalPins = 7;
+var address;
+var iconWidth = 60, iconHeight = 60;
+var mainSlider, mainGalleryContent;
+
 
 jQuery(document).ready(function($) {
 
@@ -6,6 +16,10 @@ jQuery(document).ready(function($) {
   setListeners();
   //initAnimations();
   adjustCarouselContainerHeight();
+
+  if(hasMap){
+		render_map( $("#mapContainer"));
+	}
 });
 
 
@@ -68,6 +82,14 @@ const initAnimations = async () => {
 function createVars() {
   moreContainer = $(".moreContainer");
   siteHeader = document.querySelector(".siteHeader");
+  
+
+  if(hasMap){
+    mapContainer = $("#mapContainer");
+    listContainer = $("#listContainer");
+    address = $(".address");
+    mapPortion = $(".mapPortion");
+  }
 }
 
 function setListeners() {
@@ -128,9 +150,16 @@ function setListeners() {
     e.stopPropagation(); 
     const $menuItem = $(this).closest(".menuItem"); //padre
   
-
     $(".menuItem").not($menuItem).removeClass("active");
     $menuItem.toggleClass("active");
+  });
+
+  $(".cityName").on("click", function (e) {
+    e.stopPropagation(); 
+    const $mapItem = $(this).closest(".mapItem"); //padre
+  
+    $(".mapItem").not($mapItem).removeClass("active");
+    $mapItem.toggleClass("active");
   });
 }
 
@@ -194,4 +223,401 @@ function adjustJobCardSizes() {
 }
 
 window.addEventListener('load', adjustJobCardSizes);
+*/
+
+function setMapVisible(_display){
+	// list, map
+	mapPortion.removeClass("active");
+	$("#" + _display + "Container").addClass("active");
+	$('.mapMenu').removeClass("active");
+	$("#" + _display + "Btn").addClass("active");
+	
+	if(_display == "list"){	
+		closeAllInfoWindows();
+		address.removeClass("active");
+	}
+}
+
+
+var map;
+var infoWindows = []
+
+function render_map( $el, $zoom ) {
+	$zoom = typeof $zoom !== 'undefined' ? $zoom : 14;
+	var $markers = $el.find('.marker');
+
+	var args = {
+		zoom		: $zoom,
+		center		: new google.maps.LatLng(0, 0),
+		mapTypeId	: MY_MAPTYPE_ID,
+		mapTypeControl: true,
+		mapTypeControlOptions: {
+			style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
+			position: google.maps.ControlPosition.BOTTOM_CENTER,
+			mapTypeIds: [google.maps.MapTypeId.ROADMAP, MY_MAPTYPE_ID]
+		},
+		panControl: false,
+		zoomControl: true,
+		zoomControlOptions: {
+			style: google.maps.ZoomControlStyle.LARGE,
+			position: google.maps.ControlPosition.LEFT_CENTER
+		},
+		scaleControl: true,
+		streetViewControl: false
+	};
+
+	
+	map = new google.maps.Map(document.getElementById($el.attr("id")),args);
+	
+	var styledMapOptions = {
+		name: 'Cachivaches'
+	};
+	var customMapType = new google.maps.StyledMapType(style_dark, styledMapOptions);
+	
+	map.mapTypes.set(MY_MAPTYPE_ID, customMapType);
+	
+	
+	map.markers = [];
+	$markers.each(function(){
+    	add_marker( $(this), map );
+	});
+	
+
+	//center_map( $zoom);
+	centerCity(0);
+	
+	setTimeout(function(){	
+		setMapVisible("list");
+	}, 400);
+}
+
+
+function add_marker( $marker ) {
+	console.log($marker.attr('data-lat'))
+	console.log($marker.attr('data-lng'))
+	var latlng = new google.maps.LatLng( $marker.attr('data-lat'), $marker.attr('data-lng') );
+	var _id = $marker.attr("data-id");
+	
+	var pinNum = Math.floor(Math.random() * totalPins) + 1;
+	var iconMap = tpURL + "/images/pin-" + pinNum + ".png";
+	
+	var image = {
+		url: iconMap,
+		size: new google.maps.Size(iconWidth, iconHeight),
+		origin: new google.maps.Point(0, 0),
+		anchor: new google.maps.Point(iconWidth*0.5 , iconHeight*0.5),
+		scaledSize: new google.maps.Size(iconWidth, iconHeight)
+	};
+
+	
+	var marker = new google.maps.Marker({
+		position	: latlng,
+		map			: map,
+		icon		: image
+	});
+//icon		: tpURL
+	map.markers.push( marker );
+	marker.set("id", _id);
+
+	if( $marker.html() ){
+		var infowindow = new google.maps.InfoWindow({
+			content	: $marker.html()
+		});
+		infoWindows.push(infowindow)
+		
+		google.maps.event.addListener(marker, 'click', function() {
+			closeAllInfoWindows();
+			var _id = marker.get("id");
+			launchaddress(_id);
+			//scrollToTop();
+		});
+		google.maps.event.addListener(infowindow,'closeclick',function(){
+			closeAllInfoWindows();
+			address.removeClass("active");
+		});
+	}
+
+}
+
+function launchaddress(_id){
+	setMapVisible("map");
+	
+	
+	closeAllInfoWindows();
+	var infowindow = infoWindows[_id];
+	var marker = map.markers[_id];
+	var latlng = new google.maps.LatLng( marker.position.lat(), marker.position.lng() );
+	
+	infowindow.open( map, marker );
+	
+	var $zoom = 16;
+	map.panTo( latlng );
+	map.setZoom( $zoom );
+	
+	address.removeClass("active");
+	$("#address-" + _id).addClass("active");
+	
+}
+
+
+function closeAllInfoWindows(){
+	infoWindows.forEach(function(infoWindow){
+		infoWindow.close();
+	});
+}
+
+
+function center_map( $zoom ) {
+	$zoom = typeof $zoom !== 'undefined' ? $zoom : 14;
+	var bounds = new google.maps.LatLngBounds();
+
+	$.each( map.markers, function( i, marker ){
+		var latlng = new google.maps.LatLng( marker.position.lat(), marker.position.lng() );
+		bounds.extend( latlng );
+	});
+
+	if( map.markers.length == 1 ){
+	    map.setCenter( bounds.getCenter() );
+	    map.setZoom( $zoom );
+	}else{
+		map.fitBounds( bounds );
+	}
+}
+
+
+
+function centerCity(_id){
+	setMapVisible("map");
+	
+	
+	closeAllInfoWindows();
+	address.removeClass("active");
+	
+	var _container = $("#city-" + _id);
+	var _listItems = _container.find(".listMapBlock");
+	
+	var $zoom = 16;
+	var bounds = new google.maps.LatLngBounds();
+	var count = 0;
+	
+	var addresss = _container.find(".address");
+
+	addresss.each(function(index, element) {
+		var _id = $(this).attr('data-id');
+		var marker = map.markers[_id];
+		var latlng = new google.maps.LatLng( marker.position.lat(), marker.position.lng() );
+        
+		count++;
+		bounds.extend( latlng );
+    });
+	
+	
+	if( count == 0 ){
+		
+	}else if( count == 1 ){
+		map.setCenter( bounds.getCenter() );
+		map.setZoom( $zoom );
+	}else{
+		map.setCenter( bounds.getCenter() );
+		map.fitBounds( bounds );
+	}
+	
+	
+}
+
+
+var MY_MAPTYPE_ID = 'custom_style';
+
+var style_dark = [
+    {
+        "featureType": "all",
+        "elementType": "labels.text.fill",
+        "stylers": [
+            {
+                "saturation": 36
+            },
+            {
+                "color": "#000000"
+            },
+            {
+                "lightness": 40
+            }
+        ]
+    },
+    {
+        "featureType": "all",
+        "elementType": "labels.text.stroke",
+        "stylers": [
+            {
+                "visibility": "on"
+            },
+            {
+                "color": "#000000"
+            },
+            {
+                "lightness": 16
+            }
+        ]
+    },
+    {
+        "featureType": "all",
+        "elementType": "labels.icon",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "administrative",
+        "elementType": "geometry.fill",
+        "stylers": [
+            {
+                "color": "#000000"
+            },
+            {
+                "lightness": 20
+            }
+        ]
+    },
+    {
+        "featureType": "administrative",
+        "elementType": "geometry.stroke",
+        "stylers": [
+            {
+                "color": "#000000"
+            },
+            {
+                "lightness": 17
+            },
+            {
+                "weight": 1.2
+            }
+        ]
+    },
+    {
+        "featureType": "landscape",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "color": "#000000"
+            },
+            {
+                "lightness": 20
+            }
+        ]
+    },
+    {
+        "featureType": "poi",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "color": "#000000"
+            },
+            {
+                "lightness": 21
+            }
+        ]
+    },
+    {
+        "featureType": "road.highway",
+        "elementType": "geometry.fill",
+        "stylers": [
+            {
+                "color": "#000000"
+            },
+            {
+                "lightness": 17
+            }
+        ]
+    },
+    {
+        "featureType": "road.highway",
+        "elementType": "geometry.stroke",
+        "stylers": [
+            {
+                "color": "#000000"
+            },
+            {
+                "lightness": 29
+            },
+            {
+                "weight": 0.2
+            }
+        ]
+    },
+    {
+        "featureType": "road.arterial",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "color": "#000000"
+            },
+            {
+                "lightness": 18
+            }
+        ]
+    },
+    {
+        "featureType": "road.local",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "color": "#000000"
+            },
+            {
+                "lightness": 16
+            }
+        ]
+    },
+    {
+        "featureType": "transit",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "color": "#000000"
+            },
+            {
+                "lightness": 19
+            }
+        ]
+    },
+    {
+        "featureType": "water",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "color": "#000000"
+            },
+            {
+                "lightness": 17
+            }
+        ]
+    }
+];
+
+/*
+
+window.onorientationchange = resize;
+
+$(window).resize(function() {
+	resize();
+});
+
+function resize(){
+	//screenWidth = $(window).width() + getScrollBarWidth();
+	screenWidth = $(window).width();
+	screenHeight = $(window).height();
+  
+  if(hasMap){
+    if(screenWidth>768){
+      mapContainer.height(screenHeight - 80);
+      listContainer.height(screenHeight - 80);
+    }else{
+      mapContainer.height(screenWidth);
+      listContainer.height(screenWidth);
+    }
+  }
+}
+
 */

@@ -42,6 +42,7 @@
 <script type="text/javascript" src="<?php echo themeDirectory();?>js/jquery-3.7.1.min.js"></script>
 <script type="text/javascript" src="<?php echo themeDirectory();?>js/script.js"></script>
 <script type="text/javascript"  src="<?= themeDirectory(); ?>js/slick.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDQGcNDqze1N3bzeJTAHL9m1Z9UGD6D3Rg"></script>
 <!--script src="<?php echo themeDirectory();?>js/aos.js"></script -->
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
