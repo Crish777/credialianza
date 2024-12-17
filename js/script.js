@@ -91,6 +91,7 @@ function createVars() {
     listContainer = $("#listContainer");
     address = $(".address");
     mapPortion = $(".mapPortion");
+    
   }
 }
 
