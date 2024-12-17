@@ -6,7 +6,7 @@ var mapContainer, listContainer;
 var totalPins = 7;
 var address;
 var iconWidth = 60, iconHeight = 60;
-var mainSlider, mainGalleryContent;
+var mainSlider, mainGalleryContent, interactiveUlItem;
 
 
 jQuery(document).ready(function($) {
@@ -83,6 +83,7 @@ const initAnimations = async () => {
 function createVars() {
   moreContainer = $(".moreContainer");
   siteHeader = document.querySelector(".siteHeader");
+  interactiveUlItem = document.querySelectorAll(".interactiveUlItem")
   
 
   if(hasMap){
@@ -94,6 +95,21 @@ function createVars() {
 }
 
 function setListeners() {
+
+  if(interactiveUlItem.length > 0){
+    interactiveUlItem.forEach((item) => {
+      item.addEventListener("click",() => {
+        if(item.classList.contains("active")){
+          return;
+        }
+        let itemSelected = item.parentNode.querySelector(".interactiveUlItem.active");
+        if(itemSelected){
+          itemSelected.classList.remove("active");
+        }
+        item.classList.add("active");
+      })
+    })
+  }
   // Scrolling 
   window.addEventListener("resize", () => {});
 

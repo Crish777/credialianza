@@ -45,7 +45,7 @@
     <div style="background-image: url('<?= $themeDirectory; ?>trashimages/dual1.jpg');" class="dualImage" data-aos="fade-up"  data-aos-duration="700"></div>
   </div>
       
-  <div class="pannelContainer " style="background-image: url('<?= $themeDirectory; ?>trashimages/pannel1.jpg');"  data-aos="fade-up"  data-aos-duration="700">
+  <!-- <div class="pannelContainer " style="background-image: url('<?= $themeDirectory; ?>trashimages/pannel1.jpg');"  data-aos="fade-up"  data-aos-duration="700">
     <div class="pannelTitleContainer">
       <h2 class="pannelTitle shadow">NUESTROS</br>
         <strong>SERVICIOS</strong> 
@@ -120,7 +120,7 @@
       <img src="<?= themeDirectory(); ?>images/arrowbutton.svg" class="buttonArrow">
     </button>
 
-  </div>
+  </div> -->
 
   <div class="dualContainer inversed">
     <div class="dualTextConatiner">

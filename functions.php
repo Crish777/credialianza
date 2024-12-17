@@ -67,6 +67,13 @@ add_action( 'wp_enqueue_scripts', 'wpdocs_theme_name_scripts' );
 add_filter( "show_admin_bar", "__return_false" );
 
 
+//quita el wisiwig que viene por defecto en los post o paginas del cms////////////////////
+add_action('init', 'remove_content_editor');
+function remove_content_editor() {
+   //remove_post_type_support( 'post', 'editor' );
+   remove_post_type_support( 'page', 'editor' );
+}
+
 /*
 function settingsID(){
 	return 76;
@@ -128,12 +135,7 @@ function register_custom_menu_page() {
 	add_menu_page('Ajustes', 'Ajustes', 'edit_posts', 'post.php?post=' . $settingsID . '&action=edit', '', '', 0);		
 }
 
-//quita el wisiwig que viene por defecto en los post o paginas del cms////////////////////
-add_action('init', 'remove_content_editor');
-function remove_content_editor() {
-   //remove_post_type_support( 'post', 'editor' );
-   remove_post_type_support( 'page', 'editor' );
-}
+
 
 //agrega nuevos tamaños a las imagenes subidas por el cms/////////////////////////////////
 add_image_size( 'super-large', 2048, 2048, false);
