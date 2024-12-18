@@ -2222,9 +2222,9 @@ body {
 
 .interactiveAsideUl {
   width: 35%;
-  position: sticky;
+  /* position: sticky;
   top: 150px;
-  left: 0;
+  left: 0; */
 }
 
 .interactiveUl {
