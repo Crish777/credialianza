@@ -60,6 +60,7 @@ const riskManagmentAnimation = () => {
       (el.offsetHeight + 150) * index
     )}px` ;
     console.log(yMovement);
+    console.log(Math.sign(yMovement) === -1 ? parseInt(yMovement) * -1 : parseInt(yMovement) * 1);
     tl.to(interactiveUlItem[index], {
       fontWeight: "bold",
     })
