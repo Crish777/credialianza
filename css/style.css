@@ -2243,8 +2243,12 @@ body {
   font-weight: bold;
 }
 
-.siwtchContentSide {
+.slickArticleSide{
   width: calc(65% - 50px);
+}
+
+.siwtchContentSide {
+  width: 100%;
 }
 
 .siwtchContentSide ol {

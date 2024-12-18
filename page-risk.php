@@ -46,40 +46,46 @@
       </ul>
 
     </aside>
-    <article class="siwtchContentSide">
-      <h2 class="blueTitle" data-aos="fade-left" data-aos-duration="500">
-        Continuidad de </br>
-        <strong>Negocio </strong>
-      </h2>
+    <div class="slickArticleSide">
 
-      <p class="dualParagraph" data-aos="fade-left" data-aos-duration="500">
-        Se creó el plan de continuidad de negocio (PCN) con el objetivo de Garantizar que, ante una situación de crisis
-        o interrupción, Credialianza pueda mantener sus servicios esenciales y volver a la normalidad en el menor tiempo
-        posible. </br></br>
-        Los componentes más destacados en el PCN se presentan los siguientes:
-      </p>
+      <article class="siwtchContentSide">
+        <h2 class="blueTitle" data-aos="fade-left" data-aos-duration="500">
+          Continuidad de </br>
+          <strong>Negocio </strong>
+        </h2>
 
-      <ol data-aos="fade-left" data-aos-duration="500">
-        <li>
-          <h3><strong>Análisis de impacto en el negocio (BIA)</strong></h3>
-          <p>Se cuenta con una evaluación de los procesos críticos y su impacto en caso de interrupciones.</p>
-        </li>
-        <li>
-          <h3><strong>Planes de continuidad de negocio (PCM)</strong></h3>
-          <p>Se desarrollaron los respectivos procedimientos para mitigar el impacto y recuperar operaciones.</p>
-        </li>
-        <li>
-          <h3><strong>Simulacros y pruebas</strong></h3>
-          <p>A pesar de que no se realización simulacros para evaluar la efectividad de los planes de continuidad, estos
-            se esperan sean realizados durante el siguiente año.</p>
-        </li>
-        <li>
-          <h3><strong>Capacitaciones</strong></h3>
-          <p>Se llevó a cabo proceso de formación para los empleados sobre su rol en caso de activación del plan de
-            continuidad.</p>
-        </li>
-      </ol>
-    </article>
+        <p class="dualParagraph" data-aos="fade-left" data-aos-duration="500">
+          Se creó el plan de continuidad de negocio (PCN) con el objetivo de Garantizar que, ante una situación de
+          crisis
+          o interrupción, Credialianza pueda mantener sus servicios esenciales y volver a la normalidad en el menor
+          tiempo
+          posible. </br></br>
+          Los componentes más destacados en el PCN se presentan los siguientes:
+        </p>
+
+        <ol data-aos="fade-left" data-aos-duration="500">
+          <li>
+            <h3><strong>Análisis de impacto en el negocio (BIA)</strong></h3>
+            <p>Se cuenta con una evaluación de los procesos críticos y su impacto en caso de interrupciones.</p>
+          </li>
+          <li>
+            <h3><strong>Planes de continuidad de negocio (PCM)</strong></h3>
+            <p>Se desarrollaron los respectivos procedimientos para mitigar el impacto y recuperar operaciones.</p>
+          </li>
+          <li>
+            <h3><strong>Simulacros y pruebas</strong></h3>
+            <p>A pesar de que no se realización simulacros para evaluar la efectividad de los planes de continuidad,
+              estos
+              se esperan sean realizados durante el siguiente año.</p>
+          </li>
+          <li>
+            <h3><strong>Capacitaciones</strong></h3>
+            <p>Se llevó a cabo proceso de formación para los empleados sobre su rol en caso de activación del plan de
+              continuidad.</p>
+          </li>
+        </ol>
+      </article>
+    </div>
 
   </section>
 

@@ -10,7 +10,7 @@ var mainSlider, mainGalleryContent, interactiveUlItem;
 
 
 jQuery(document).ready(function($) {
-
+  gsap.registerPlugin(ScrollTrigger);
   initslick();
   createVars();
   setListeners();
