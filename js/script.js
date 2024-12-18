@@ -38,7 +38,7 @@ const riskManagmentAnimation = () => {
       trigger: ".slickArticleSide",
       pin: true,
       start: "0 +=150",
-      end: `bottom 100%-=100px`, // end after scrolling 500px beyond the start
+      end: `bottom bottom`, // end after scrolling 500px beyond the start
       scrub: 1, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
     },
   });
@@ -50,18 +50,27 @@ const riskManagmentAnimation = () => {
 
   let totalHeight = 0;
   siwtchContentSide.forEach((el, index) => {
-     const yMovement = -100*(index+1);
-     tl.to(interactiveUlItem[index], {
-      fontWeight: 'bold',
-     })
-     .addLabel('init')
-     .to(el, {
-       translateY: `${-((window.innerHeight - el.offsetHeight) + ((el.offsetHeight + 60) * index))}px`,
-     }, '<')
-     .to(el, {
-       opacity: 0
-     })
-
+    const yMovement = -100 * (index + 1);
+    tl.to(interactiveUlItem[index], {
+      fontWeight: "bold",
+    }, '<')
+      .addLabel("init")
+      .to(
+        el,
+        {
+          translateY: `${-(
+            window.innerHeight -
+            el.offsetHeight +
+            (el.offsetHeight + 60) * index
+          )}px`,
+        },
+        "<"
+      );
+    if (index < siwtchContentSide.length - 1) {
+      tl.to(el, {
+        opacity: 0,
+      });
+    }
     // totalHeight += el.offsetHeight;
     // console.log(totalHeight);
   });
