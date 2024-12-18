@@ -35,14 +35,14 @@
   <section class="siteSection stickyAsideNav">
     <aside class="interactiveAsideUl">
       <ul class="interactiveUl">
-        <li data-aos="fade-right" data-aos-duration="500" class="interactiveUlItem active">Sistema de administración de
+        <li class="interactiveUlItem active">Sistema de administración de
           riesgo de lavado de activos y financiación del
           terrorismo (SAGRILAFT)</li>
-        <li data-aos="fade-right" data-aos-duration="550" class="interactiveUlItem">Programa de Transparencia y Ética
+        <li class="interactiveUlItem">Programa de Transparencia y Ética
           Empresarial (PTEE)</li>
-        <li data-aos="fade-right" data-aos-duration="600" class="interactiveUlItem">Gestión del riesgo operativo</li>
-        <li data-aos="fade-right" data-aos-duration="650" class="interactiveUlItem">Continuidad de negocio</li>
-        <li data-aos="fade-right" data-aos-duration="700" class="interactiveUlItem">Sistema de control interno</li>
+        <li class="interactiveUlItem">Gestión del riesgo operativo</li>
+        <li class="interactiveUlItem">Continuidad de negocio</li>
+        <li class="interactiveUlItem">Sistema de control interno</li>
       </ul>
 
     </aside>

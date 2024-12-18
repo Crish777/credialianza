@@ -56,8 +56,11 @@ const riskManagmentAnimation = () => {
      })
      .addLabel('init')
      .to(el, {
-       translateY: `${-((window.innerHeight - el.offsetHeight) + ((el.offsetHeight + 30) * index))}px`,
+       translateY: `${-((window.innerHeight - el.offsetHeight) + ((el.offsetHeight + 60) * index))}px`,
      }, '<')
+     .to(el, {
+       opacity: 0
+     })
 
     // totalHeight += el.offsetHeight;
     // console.log(totalHeight);
