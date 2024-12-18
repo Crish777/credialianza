@@ -20,7 +20,7 @@ jobs:
 
       - name: Deploy to EC2
         run: |
-          ssh -o StrictHostKeyChecking=no ${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }} "
+          ssh -o StrictHostKeyChecking=no bitnami@$18.233.160.100"
             cd /opt/bitnami/wordpress/wp-content/themes/credialianza &&
             git pull origin main &&
             echo 'Deployment completed successfully!'
