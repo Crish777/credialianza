@@ -21,18 +21,8 @@ jobs:
       - name: Deploy to EC2
         run: |
           ssh -o StrictHostKeyChecking=no ${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }} "
-            # Navegar al directorio de los temas de WordPress
-            cd /opt/bitnami/wordpress/wp-content/themes || mkdir -p /opt/bitnami/wordpress/wp-content/themes && cd /opt/bitnami/wordpress/wp-content/themes
-            
-            # Verificar si es un repositorio Git, si no, clonar el repositorio
-            if [ ! -d '.git' ]; then
-              echo 'Repositorio no encontrado. Clonando desde GitHub...'
-              git clone https://github.com/Crish777/credialianza.git .
-            fi
-
-            # Hacer pull del repositorio para traer los últimos cambios
-            git pull origin main
-
-            # Otros comandos que desees ejecutar, como la instalación de dependencias o la construcción del proyecto
+            cd /opt/bitnami/wordpress/wp-content/themes &&
+            rm -rf credialianza && # Elimina el directorio existente del tema
+            git clone https://github.com/Crish777/credialianza.git credialianza && # Clona el repositorio
             echo 'Deployment completed successfully!'
           "
