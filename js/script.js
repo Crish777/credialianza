@@ -48,16 +48,16 @@ const riskManagmentAnimation = () => {
   //   translateY: `${-100}%`
   // })
 
-  let totalHeight = 0;
   siwtchContentSide.forEach((el, index) => {
-    const yMovement = -100 * (index + 1);
-    tl.to(
-      interactiveUlItem[index],
-      {
-        fontWeight: "bold",
-      },
-      "<"
-    )
+    const yMovement = `${-(
+      window.innerHeight -
+      el.offsetHeight +
+      (el.offsetHeight + 30) * index
+    )}px`;
+    console.log(yMovement);
+    tl.to(interactiveUlItem[index], {
+      fontWeight: "bold",
+    })
       .addLabel("init")
       .to(
         el,
