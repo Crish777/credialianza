@@ -49,11 +49,16 @@ const riskManagmentAnimation = () => {
   // })
 
   siwtchContentSide.forEach((el, index) => {
-    const yMovement = `${-(
+    const windowMajorHeight = window.innerHeight > el.offsetHeight;
+    const yMovement = windowMajorHeight ?`${-(
       window.innerHeight -
       el.offsetHeight +
       (el.offsetHeight + 30) * index
-    )}px`;
+    )}px` :`${(
+      window.innerHeight -
+      el.offsetHeight +
+      (el.offsetHeight + 150) * index
+    )}px` ;
     console.log(yMovement);
     tl.to(interactiveUlItem[index], {
       fontWeight: "bold",
@@ -62,11 +67,7 @@ const riskManagmentAnimation = () => {
       .to(
         el,
         {
-          translateY: `${-(
-            window.innerHeight -
-            el.offsetHeight +
-            (el.offsetHeight + 30) * index
-          )}px`,
+          translateY: yMovement,
         },
         "<"
       );
