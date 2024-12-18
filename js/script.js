@@ -51,9 +51,13 @@ const riskManagmentAnimation = () => {
   let totalHeight = 0;
   siwtchContentSide.forEach((el, index) => {
     const yMovement = -100 * (index + 1);
-    tl.to(interactiveUlItem[index], {
-      fontWeight: "bold",
-    }, '<')
+    tl.to(
+      interactiveUlItem[index],
+      {
+        fontWeight: "bold",
+      },
+      "<"
+    )
       .addLabel("init")
       .to(
         el,
@@ -61,7 +65,7 @@ const riskManagmentAnimation = () => {
           translateY: `${-(
             window.innerHeight -
             el.offsetHeight +
-            (el.offsetHeight + 60) * index
+            (el.offsetHeight + 30) * index
           )}px`,
         },
         "<"
