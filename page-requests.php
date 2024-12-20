@@ -10,7 +10,7 @@
 
 <main class="siteMain">
 
-  <div class="heromask">
+  <!-- <div class="heromask">
     <div class="heroContainer darkGradientHero" style="background-image: url('<?= $themeDirectory; ?>trashimages/hero1.jpg');">
       <div class="heroText textBottom">
         <h2 class="heroTitle">
@@ -28,6 +28,21 @@
       <a class="maskItem" href="<?= homeDirectory(); ?>/">Paz y salvo</a>
       <a class="maskItem" href="<?= homeDirectory(); ?>/">Certificado de deuda</a>
     </div>
+  </div> -->
+
+  <div class="heroContainer darkGradient"
+    style="background-image: url('<?= $themeDirectory; ?>trashimages/about-1.jpg');">
+    <div class="heroText textBottom">
+      <h2 class="heroTitle">
+        SOLICITA TU
+        <br />
+        <span class="noStroke">CRÉDITO</span>
+      </h2>
+      <p class="heroParagraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+        ut labore et dolore magna aliqua.
+      </p>
+
+    </div>
   </div>
 
 
@@ -38,7 +53,7 @@
         <strong>cumplir tus sueños</strong>
       </h2>
 
-      <h3 class="blueSubtitle" data-aos="fade-left"  data-aos-duration="500">Cumplirlos es muy sencillo  </h3>
+      <!-- <h3 class="blueSubtitle" data-aos="fade-left"  data-aos-duration="500">Cumplirlos es muy sencillo  </h3> -->
 
       <p class="dualParagraph" data-aos="fade-left"  data-aos-duration="500">
         Si estás interesado en adquirir un crédito de libranza con nosotros, déjanos tus datos y uno de nuestros 
@@ -86,7 +101,7 @@
   </div>
 
 
-  <div class="pannelContainer form " style="background-image: url('<?= $themeDirectory; ?>trashimages/pannel2.png');"  data-aos="fade-up"  data-aos-duration="700">
+  <!-- <div class="pannelContainer form " style="background-image: url('<?= $themeDirectory; ?>trashimages/pannel2.png');"  data-aos="fade-up"  data-aos-duration="700">
     <div class="pannelTitleContainer">
       <h2 class="pannelTitle">Extracto</br>
         <strong>Actual</strong> 
@@ -297,7 +312,7 @@
       </p>
     </div>
     <div style="background-image: url('<?= $themeDirectory; ?>trashimages/dual1.jpg');" class="dualImage" data-aos="fade-up"  data-aos-duration="700"></div>
-  </div>
+  </div> -->
 
 
   <div class="carouselContainer">

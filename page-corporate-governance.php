@@ -35,6 +35,31 @@
       de operaciones de crédito por libranza.</p>
   </section>
 
+  <div class="dualContainer">
+    <div class="dualTextConatiner">
+      <h2 class="blueTitle" data-aos="fade-left" data-aos-duration="500">
+        Trabajando 15 años </br>
+        <strong>para cumplir tus sueños </strong>
+      </h2>
+
+      <h3 class="blueSubtitle" data-aos="fade-left" data-aos-duration="500">Siempre es un buen momento para ti </h3>
+
+      <p class="dualParagraph" data-aos="fade-left" data-aos-duration="500">
+        Credialianza S.A.S es una empresa con amplia experiencia y credibilidad en el mercado del crédito de
+        libranzas. Ofrecemos atención personalizada en diferentes ciudades del país. La rapidez para diligenciar
+        el estudio de crédito y realizar el desembolso, y la importancia de responder de manera constante a las
+        necesidades de nuestros clientes son nuestros principales objetivos. </br></br>
+
+
+        Nuestra filosofía consiste en crear una relación duradera con nuestros clientes al ofrecer
+        excelentes condiciones en nuestros créditos, a través de una red de asesores a nivel nacional,
+        disponibles en todo momento con el único propósito de prestar un servicio al cliente con calidad.
+      </p>
+    </div>
+    <div style="background-image: url('<?= $themeDirectory; ?>trashimages/dual1.jpg');" class="dualImage"
+      data-aos="fade-up" data-aos-duration="700"></div>
+  </div>
+
   <section class="siteSection guidesPdfSection">
     <a href="" target="_blank" class="guidePdfItem">
       <div class="pdfIcon bg-ct"></div>

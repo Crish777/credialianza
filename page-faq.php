@@ -1,0 +1,207 @@
+<?php 
+/**
+ * Template Name: Faq
+ *
+ */
+
+   get_header(); 
+	$themeDirectory = themeDirectory();
+?>
+
+
+
+<main class="siteMain">
+
+  <div class="heroContainer darkGradient"
+    style="background-image: url('<?= $themeDirectory; ?>trashimages/hero1.jpg');">
+    <div class="heroText">
+      <h2 class="heroTitle">
+        FAQ
+      </h2>
+
+    </div>
+  </div>
+
+  <section class="siteSection faqSection" >
+    <p class="pannelParagraph black max-w-5xl mx-auto mb-16">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+      magna aliqua.
+    </p>
+
+    <div class="faqsContainer w-full relative">
+
+      <div class="faq w-full relative">
+        <h2 class="faqTitle w-full relative p-8 pr-12  cursor-pointer">
+          ¿Qué es Credialianza?
+        </h2>
+        <p class="faqParagraph siteParagraph w-full relative">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua.
+        </p>
+      </div>
+
+      <div class="faq w-full relative">
+        <h2 class="faqTitle w-full relative p-8 pr-12  cursor-pointer">
+          ¿Qué es Credialianza?
+        </h2>
+        <p class="faqParagraph siteParagraph w-full relative">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua.
+        </p>
+      </div>
+      <div class="faq w-full relative">
+        <h2 class="faqTitle w-full relative p-8 pr-12  cursor-pointer">
+          ¿Qué es Credialianza?
+        </h2>
+        <p class="faqParagraph siteParagraph w-full relative">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <div class="carouselContainer">
+    <div class="carouselContainerAbsolute">
+
+      <h2 class="blueTitle centered carouselSlick">
+        Nuestros </br>
+        <strong>Aliados</strong>
+      </h2>
+      <div class="carousel">
+        <div class="carouselGroup">
+          <div class="carouselCard">
+            <img src="<?= themeDirectory(); ?>trashimages/logo1.png" class="carouselItem">
+          </div>
+
+          <div class="carouselCard">
+            <img src="<?= themeDirectory(); ?>trashimages/logo2.jpg" class="carouselItem">
+          </div>
+
+          <div class="carouselCard">
+            <img src="<?= themeDirectory(); ?>trashimages/logo3.png" class="carouselItem">
+          </div>
+
+          <div class="carouselCard">
+            <img src="<?= themeDirectory(); ?>trashimages/logo4.png" class="carouselItem">
+          </div>
+        </div>
+        <!-- Add `aria-hidden` to hide the duplicated carouselCards from screen readers. -->
+        <div aria-hidden class="carouselGroup">
+          <div class="carouselCard">
+            <img src="<?= themeDirectory(); ?>trashimages/logo1.png" class="carouselItem">
+          </div>
+
+          <div class="carouselCard">
+            <img src="<?= themeDirectory(); ?>trashimages/logo2.jpg" class="carouselItem">
+          </div>
+
+          <div class="carouselCard">
+            <img src="<?= themeDirectory(); ?>trashimages/logo3.png" class="carouselItem">
+          </div>
+
+          <div class="carouselCard">
+            <img src="<?= themeDirectory(); ?>trashimages/logo4.png" class="carouselItem">
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+  </div>
+
+
+  <div class="pannelContainer form" style="background-image: url('<?= $themeDirectory; ?>trashimages/pannel3.jpg');"
+    data-aos="fade-up" data-aos-duration="700">
+    <h2 class="formHollowTitle">
+      CONTÁCTANOS
+    </h2>
+    <p class="pannelParagraph">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do </br>
+      eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    </p>
+
+    <form class="formContainer">
+      <div class="formSection">
+        <div class="formItem">
+          <h2 class="formItemTitle">Nombres</h2>
+          <input type="text" class="formItemInput">
+        </div>
+        <div class="formItem">
+          <h2 class="formItemTitle">Apellidos</h2>
+          <input type="text" class="formItemInput">
+        </div>
+      </div>
+
+      <div class="formSection">
+        <div class="formItem">
+          <h2 class="formItemTitle">Email</h2>
+          <input type="text" class="formItemInput">
+        </div>
+        <div class="formItem">
+          <h2 class="formItemTitle">Celular</h2>
+          <input type="text" class="formItemInput">
+        </div>
+      </div>
+
+      <div class="formSection">
+        <div class="formItem comments">
+          <h2 class="formItemTitle">
+            Comentarios </br>
+
+            <strong>Agrega aquí tu mensaje y pronto nos comunicaremos </br> contigo </strong>
+          </h2>
+          <input type="text" class="formItemInput">
+        </div>
+      </div>
+
+      <button class="blueButton">
+        Enviar
+        <img src="<?= themeDirectory(); ?>images/arrowbutton.svg" class="buttonArrow">
+      </button>
+    </form>
+
+    <div class="formBottom">
+      <div class="formBottomSection">
+        <h2 class="formBottomTitle">Dirección:</h2>
+        <p class="formBottomParagraph">
+          Calle 113 No. 7-45. Oficina 503 </br>
+          Torre B, Ed. Teleport Businness Park
+        </p>
+      </div>
+      <span class="verticalLine"> </span>
+
+
+      <div class="formBottomSection">
+        <h2 class="formBottomTitle">Teléfono:</h2>
+        <p class="formBottomParagraph">
+          +60 (1) 7940110
+        </p>
+      </div>
+      <span class="verticalLine"> </span>
+
+
+      <div class="formBottomSection">
+        <h2 class="formBottomTitle">Celular:</h2>
+        <p class="formBottomParagraph">
+          01 8000 196015
+        </p>
+      </div>
+      <span class="verticalLine"> </span>
+
+      <div class="formBottomSection">
+        <h2 class="formBottomTitle">Email:</h2>
+        <p class="formBottomParagraph">
+          atencionalcliente@credialianza.com
+        </p>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<?php 
+
+   get_footer(); 
+?>

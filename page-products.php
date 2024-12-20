@@ -1,6 +1,6 @@
 <?php 
 /**
- * Template Name: Risk managment
+ * Template Name: Products
  *
  */
 
@@ -15,8 +15,7 @@
     style="background-image: url('<?= $themeDirectory; ?>trashimages/about-1.jpg');">
     <div class="heroText textBottom">
       <h2 class="heroTitle">
-        GESTION <br />
-        <span class="noStroke">DE RIESGO</span>
+        PRODUCTOS
       </h2>
       <p class="heroParagraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
         ut labore et dolore magna aliqua.
@@ -25,68 +24,61 @@
     </div>
   </div>
 
-  <section class="siteSection onlyTextSection">
-    <p class="onlyTextParagraph" data-aos="fade-down" data-aos-duration="500">Para llevar el correcto desarrollo de la
-      Gestión Integral de Riesgos, Credialianza
-      cuenta con una Área
-      de Riesgo sobre la cual se lleva la administración de estos.</p>
-  </section>
 
-  <section class="siteSection stickyAsideNav">
+  <section class="siteSection stickyAsideNav narrowerNav">
     <aside class="interactiveAsideUl">
       <ul class="interactiveUl">
-        <li class="interactiveUlItem active">Sistema de administración de
-          riesgo de lavado de activos y financiación del
-          terrorismo (SAGRILAFT)</li>
-        <li class="interactiveUlItem">Programa de Transparencia y Ética
-          Empresarial (PTEE)</li>
-        <li class="interactiveUlItem">Gestión del riesgo operativo</li>
-        <li class="interactiveUlItem">Continuidad de negocio</li>
-        <li class="interactiveUlItem">Sistema de control interno</li>
+        <li class="interactiveUlItem active">Pensionados</li>
+        <li class="interactiveUlItem">Empleados públicos </li>
+        <li class="interactiveUlItem">Fuerzas armadas</li>
       </ul>
 
     </aside>
     <div class="slickArticleSide">
 
       <article class="siwtchContentSide" data-index="0">
-        <h2 class="blueTitle" >
-          Continuidad de </br>
-          <strong>Negocio </strong>
-        </h2>
+        <div class="dualContainer inversed">
+          <div class="dualTextConatiner">
+            <h2 class="blueTitle" data-aos="fade-left" data-aos-duration="500">
+              Empleados <strong>Públicos</strong>
+            </h2>
 
-        <p class="dualParagraph">
-          Se creó el plan de continuidad de negocio (PCN) con el objetivo de Garantizar que, ante una situación de
-          crisis
-          o interrupción, Credialianza pueda mantener sus servicios esenciales y volver a la normalidad en el menor
-          tiempo
-          posible. </br></br>
-          Los componentes más destacados en el PCN se presentan los siguientes:
-        </p>
+            <p class="dualParagraph" data-aos="fade-left" data-aos-duration="500">
+              Obtén un crédito de forma inmediata, segura y confiable. Tenemos convenios con muchas instituciones
+              gubernamentales a nivel nacional que te permiten acceder a un producto financiero para cada necesidad que
+              tengas.
+            </p>
 
-        <ol>
-          <li>
-            <h3><strong>Análisis de impacto en el negocio (BIA)</strong></h3>
-            <p>Se cuenta con una evaluación de los procesos críticos y su impacto en caso de interrupciones.</p>
-          </li>
-          <li>
-            <h3><strong>Planes de continuidad de negocio (PCM)</strong></h3>
-            <p>Se desarrollaron los respectivos procedimientos para mitigar el impacto y recuperar operaciones.</p>
-          </li>
-          <li>
-            <h3><strong>Simulacros y pruebas</strong></h3>
-            <p>A pesar de que no se realización simulacros para evaluar la efectividad de los planes de continuidad,
-              estos
-              se esperan sean realizados durante el siguiente año.</p>
-          </li>
-          <li>
-            <h3><strong>Capacitaciones</strong></h3>
-            <p>Se llevó a cabo proceso de formación para los empleados sobre su rol en caso de activación del plan de
-              continuidad.</p>
-          </li>
-        </ol>
+            <div class="dualCard">
+              <header class="headerDualCard">
+                <h4 class="titleDualCard">BENEFICIOS</h4>
+              </header>
+              <ul class="contentDualCard">
+                <li class="dualCardItem">
+                  <p class="dualCardItemText"><strong>Edad: </strong>Hasta 57 años para mujeres y hasta 62 años para
+                    hombres</p>
+                </li>
+                <li class="dualCardItem">
+                  <p class="dualCardItemText"><strong>Plazos otorgados: </strong>Hasta 144 meses</p>
+                </li>
+                <li class="dualCardItem">
+                  <p class="dualCardItemText"><strong>Montos: </strong>Desde 1 millón hasta $140 millones</p>
+                </li>
+              </ul>
+            </div>
+
+            <button class="blueButton">
+              Solicita tu crédito
+              <img src="<?= themeDirectory(); ?>images/arrowbutton.svg" class="buttonArrow">
+            </button>
+
+          </div>
+          <div style="background-image: url('<?= $themeDirectory; ?>trashimages/dual1.jpg');" class="dualImage"
+            data-aos="fade-up" data-aos-duration="700"></div>
+        </div>
       </article>
       <article class="siwtchContentSide" data-index="1">
-        <h2 class="blueTitle" >
+        <h2 class="blueTitle">
           Continuidad de </br>
           <strong>Negocio </strong>
         </h2>
@@ -123,81 +115,7 @@
         </ol>
       </article>
       <article class="siwtchContentSide" data-index="2">
-        <h2 class="blueTitle" >
-          Continuidad de </br>
-          <strong>Negocio </strong>
-        </h2>
-
-        <p class="dualParagraph">
-          Se creó el plan de continuidad de negocio (PCN) con el objetivo de Garantizar que, ante una situación de
-          crisis
-          o interrupción, Credialianza pueda mantener sus servicios esenciales y volver a la normalidad en el menor
-          tiempo
-          posible. </br></br>
-          Los componentes más destacados en el PCN se presentan los siguientes:
-        </p>
-
-        <ol>
-          <li>
-            <h3><strong>Análisis de impacto en el negocio (BIA)</strong></h3>
-            <p>Se cuenta con una evaluación de los procesos críticos y su impacto en caso de interrupciones.</p>
-          </li>
-          <li>
-            <h3><strong>Planes de continuidad de negocio (PCM)</strong></h3>
-            <p>Se desarrollaron los respectivos procedimientos para mitigar el impacto y recuperar operaciones.</p>
-          </li>
-          <li>
-            <h3><strong>Simulacros y pruebas</strong></h3>
-            <p>A pesar de que no se realización simulacros para evaluar la efectividad de los planes de continuidad,
-              estos
-              se esperan sean realizados durante el siguiente año.</p>
-          </li>
-          <li>
-            <h3><strong>Capacitaciones</strong></h3>
-            <p>Se llevó a cabo proceso de formación para los empleados sobre su rol en caso de activación del plan de
-              continuidad.</p>
-          </li>
-        </ol>
-      </article>
-      <article class="siwtchContentSide" data-index="3">
-        <h2 class="blueTitle" >
-          Continuidad de </br>
-          <strong>Negocio </strong>
-        </h2>
-
-        <p class="dualParagraph">
-          Se creó el plan de continuidad de negocio (PCN) con el objetivo de Garantizar que, ante una situación de
-          crisis
-          o interrupción, Credialianza pueda mantener sus servicios esenciales y volver a la normalidad en el menor
-          tiempo
-          posible. </br></br>
-          Los componentes más destacados en el PCN se presentan los siguientes:
-        </p>
-
-        <ol>
-          <li>
-            <h3><strong>Análisis de impacto en el negocio (BIA)</strong></h3>
-            <p>Se cuenta con una evaluación de los procesos críticos y su impacto en caso de interrupciones.</p>
-          </li>
-          <li>
-            <h3><strong>Planes de continuidad de negocio (PCM)</strong></h3>
-            <p>Se desarrollaron los respectivos procedimientos para mitigar el impacto y recuperar operaciones.</p>
-          </li>
-          <li>
-            <h3><strong>Simulacros y pruebas</strong></h3>
-            <p>A pesar de que no se realización simulacros para evaluar la efectividad de los planes de continuidad,
-              estos
-              se esperan sean realizados durante el siguiente año.</p>
-          </li>
-          <li>
-            <h3><strong>Capacitaciones</strong></h3>
-            <p>Se llevó a cabo proceso de formación para los empleados sobre su rol en caso de activación del plan de
-              continuidad.</p>
-          </li>
-        </ol>
-      </article>
-      <article class="siwtchContentSide" data-index="4">
-        <h2 class="blueTitle" >
+        <h2 class="blueTitle">
           Continuidad de </br>
           <strong>Negocio </strong>
         </h2>

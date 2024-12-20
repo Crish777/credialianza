@@ -12,39 +12,37 @@
 
 <main class="siteMain">
 
-  <div class="heroContainer" style="background-image: url('<?= $themeDirectory; ?>trashimages/hero1.jpg');">
-    <h2 class="heroSubtitle">
-      Obtén tu crédito de </br>
-      <strong>libranza con Credialianza</strong>
-    </h2>
-    <button class="blueButton">
-      Solicita tu crédito
-      <img src="<?= themeDirectory(); ?>images/arrowbutton.svg" class="buttonArrow">
-    </button>
+  <div class="heroContainer darkGradient"
+    style="background-image: url('<?= $themeDirectory; ?>trashimages/hero1.jpg');">
+    <div class="heroText">
+      <h2 class="heroTitle">
+        CONTÁCTANOS
+      </h2>
 
+    </div>
   </div>
 
   <div class="pannelMap">
     <div class="listContainer">
       <h2 class="blueTitle">
-      Nuestras </br>
-      <strong>sedes</strong> 
+        Nuestras </br>
+        <strong>sedes</strong>
       </h2>
       <div class="mapList">
-        <div class="mapItem">  
+        <div class="mapItem">
           <div class="cityName">
             <h2 class="cityNameTitle">Sede principal</h2>
             <img class="cityNameIcon" src="<?= themeDirectory(); ?>images/mappointerIcon.svg">
           </div>
           <ul class="addressContainer">
-            <li class="address" id="address-1"  onclick="launchStore(1)">Calle 113 No. 7-45. Oficina 503</li>
+            <li class="address" id="address-1" onclick="launchStore(1)">Calle 113 No. 7-45. Oficina 503</li>
             <li class="address" id="address-2" onclick="launchStore(2)">Calle 45 No. 90-32. BIS </li>
             <li class="address" id="address-3" onclick="launchStore(3)">Carrera 7 No. 32-16</li>
             <li class="address" id="address-4" onclick="launchStore(4)">Carrera 37 calle 3 No. 05-25</li>
           </ul>
         </div>
 
-        <div class="mapItem">  
+        <div class="mapItem">
           <div class="cityName">
             <h2 class="cityNameTitle">Bogota</h2>
             <img class="cityNameIcon" src="<?= themeDirectory(); ?>images/mappointerIcon.svg">
@@ -60,7 +58,7 @@
 
     </div>
     <div class="mapContainer mapPortion" id="mapContainer">
-      
+
       <div class="marker" data-id="0" data-lat="4.6648223" data-lng="-74.05148650000001">
         <div class="markerContent">
           <div class="markerText singleContent">
@@ -68,20 +66,22 @@
             <h3 class="markSubtitle">Oficina 1006</h3>
             <h4 class="markName">Ed. El Café</h4>
           </div>
-          <a class="btnStoreGoogleMaps" href="https://maps.app.goo.gl/LX2eGnfP72WKuyGz7" target="_blank">Ver en Google Maps</a>
+          <a class="btnStoreGoogleMaps" href="https://maps.app.goo.gl/LX2eGnfP72WKuyGz7" target="_blank">Ver en Google
+            Maps</a>
           <style>
-            .btnStoreGoogleMaps {
-              display: inline-block;
-              margin-top: 10px;
-              padding: 10px 20px;
-              background-color: #ff6347;
-              color: white;
-              text-decoration: none;
-              border-radius: 5px;
-            }
-            .btnStoreGoogleMaps:hover {
-              background-color: #e5533d;
-            }
+          .btnStoreGoogleMaps {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #ff6347;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+          }
+
+          .btnStoreGoogleMaps:hover {
+            background-color: #e5533d;
+          }
           </style>
         </div>
       </div>
@@ -98,20 +98,22 @@
             <p><em>Domingo y Festivos:</em></p>
             <p>10:30 am a 6:30 pm</p>
           </h4>
-          <a class="btnStoreGoogleMaps" href="https://maps.app.goo.gl/gnZzq5kJTtUAhf327" target="_blank">Ver en Google Maps</a>
+          <a class="btnStoreGoogleMaps" href="https://maps.app.goo.gl/gnZzq5kJTtUAhf327" target="_blank">Ver en Google
+            Maps</a>
           <style>
-            .btnStoreGoogleMaps {
-              display: inline-block;
-              margin-top: 10px;
-              padding: 10px 20px;
-              background-color: #ff6347;
-              color: white;
-              text-decoration: none;
-              border-radius: 5px;
-            }
-            .btnStoreGoogleMaps:hover {
-              background-color: #e5533d;
-            }
+          .btnStoreGoogleMaps {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #ff6347;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+          }
+
+          .btnStoreGoogleMaps:hover {
+            background-color: #e5533d;
+          }
           </style>
         </div>
       </div>
@@ -128,20 +130,22 @@
             <p><em>Domingo y Festivos:</em></p>
             <p>10 am a 6 pm</p>
           </h4>
-          <a class="btnStoreGoogleMaps" href="https://maps.app.goo.gl/rP5BEB8iPDsBL1sg6" target="_blank">Ver en Google Maps</a>
+          <a class="btnStoreGoogleMaps" href="https://maps.app.goo.gl/rP5BEB8iPDsBL1sg6" target="_blank">Ver en Google
+            Maps</a>
           <style>
-            .btnStoreGoogleMaps {
-              display: inline-block;
-              margin-top: 10px;
-              padding: 10px 20px;
-              background-color: #ff6347;
-              color: white;
-              text-decoration: none;
-              border-radius: 5px;
-            }
-            .btnStoreGoogleMaps:hover {
-              background-color: #e5533d;
-            }
+          .btnStoreGoogleMaps {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #ff6347;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+          }
+
+          .btnStoreGoogleMaps:hover {
+            background-color: #e5533d;
+          }
           </style>
         </div>
       </div>
@@ -158,20 +162,22 @@
             <p><em>Domingo y Festivos:</em></p>
             <p>10 am a 7 pm</p>
           </h4>
-          <a class="btnStoreGoogleMaps" href="https://maps.app.goo.gl/4hZ7MV7kuBCN3Dri7" target="_blank">Ver en Google Maps</a>
+          <a class="btnStoreGoogleMaps" href="https://maps.app.goo.gl/4hZ7MV7kuBCN3Dri7" target="_blank">Ver en Google
+            Maps</a>
           <style>
-            .btnStoreGoogleMaps {
-              display: inline-block;
-              margin-top: 10px;
-              padding: 10px 20px;
-              background-color: #ff6347;
-              color: white;
-              text-decoration: none;
-              border-radius: 5px;
-            }
-            .btnStoreGoogleMaps:hover {
-              background-color: #e5533d;
-            }
+          .btnStoreGoogleMaps {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #ff6347;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+          }
+
+          .btnStoreGoogleMaps:hover {
+            background-color: #e5533d;
+          }
           </style>
         </div>
       </div>
@@ -191,18 +197,19 @@
           </h4>
           <a class="btnStoreGoogleMaps" href="https://g.co/kgs/o3zLv3A" target="_blank">Ver en Google Maps</a>
           <style>
-            .btnStoreGoogleMaps {
-              display: inline-block;
-              margin-top: 10px;
-              padding: 10px 20px;
-              background-color: #ff6347;
-              color: white;
-              text-decoration: none;
-              border-radius: 5px;
-            }
-            .btnStoreGoogleMaps:hover {
-              background-color: #e5533d;
-            }
+          .btnStoreGoogleMaps {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #ff6347;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+          }
+
+          .btnStoreGoogleMaps:hover {
+            background-color: #e5533d;
+          }
           </style>
         </div>
       </div>
@@ -221,20 +228,22 @@
             <p>Domingos y festivos:</p>
             <p>11 am a 8 pm</p>
           </h4>
-          <a class="btnStoreGoogleMaps" href="https://maps.app.goo.gl/hRXtM63K33jvmPTa6" target="_blank">Ver en Google Maps</a>
+          <a class="btnStoreGoogleMaps" href="https://maps.app.goo.gl/hRXtM63K33jvmPTa6" target="_blank">Ver en Google
+            Maps</a>
           <style>
-            .btnStoreGoogleMaps {
-              display: inline-block;
-              margin-top: 10px;
-              padding: 10px 20px;
-              background-color: #ff6347;
-              color: white;
-              text-decoration: none;
-              border-radius: 5px;
-            }
-            .btnStoreGoogleMaps:hover {
-              background-color: #e5533d;
-            }
+          .btnStoreGoogleMaps {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #ff6347;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+          }
+
+          .btnStoreGoogleMaps:hover {
+            background-color: #e5533d;
+          }
           </style>
         </div>
       </div>
@@ -253,20 +262,22 @@
             <p><em>Domingos y festivos:</em></p>
             <p>10am a 8pm</p>
           </h4>
-          <a class="btnStoreGoogleMaps" href="https://maps.app.goo.gl/STKKWceigJcaPfe89" target="_blank">Ver en Google Maps</a>
+          <a class="btnStoreGoogleMaps" href="https://maps.app.goo.gl/STKKWceigJcaPfe89" target="_blank">Ver en Google
+            Maps</a>
           <style>
-            .btnStoreGoogleMaps {
-              display: inline-block;
-              margin-top: 10px;
-              padding: 10px 20px;
-              background-color: #ff6347;
-              color: white;
-              text-decoration: none;
-              border-radius: 5px;
-            }
-            .btnStoreGoogleMaps:hover {
-              background-color: #e5533d;
-            }
+          .btnStoreGoogleMaps {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #ff6347;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+          }
+
+          .btnStoreGoogleMaps:hover {
+            background-color: #e5533d;
+          }
           </style>
         </div>
       </div>
@@ -285,86 +296,89 @@
             <p><em>Domingo y Festivos:</em></p>
             <p>11 am a 8 pm</p>
           </h4>
-          <a class="btnStoreGoogleMaps" href="https://maps.app.goo.gl/3Br63ip9ewk8waEGA" target="_blank">Ver en Google Maps</a>
+          <a class="btnStoreGoogleMaps" href="https://maps.app.goo.gl/3Br63ip9ewk8waEGA" target="_blank">Ver en Google
+            Maps</a>
           <style>
-            .btnStoreGoogleMaps {
-              display: inline-block;
-              margin-top: 10px;
-              padding: 10px 20px;
-              background-color: #ff6347;
-              color: white;
-              text-decoration: none;
-              border-radius: 5px;
-            }
-            .btnStoreGoogleMaps:hover {
-              background-color: #e5533d;
-            }
+          .btnStoreGoogleMaps {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #ff6347;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+          }
+
+          .btnStoreGoogleMaps:hover {
+            background-color: #e5533d;
+          }
           </style>
         </div>
       </div>
 
-  
+
     </div>
   </div>
 
   <div class="carouselContainer">
-      <div class="carouselContainerAbsolute"> 
-    
-        <h2 class="blueTitle centered carouselSlick">
-            Nuestros </br>
-            <strong>Aliados</strong>
-        </h2>
-        <div class="carousel">
+    <div class="carouselContainerAbsolute">
+
+      <h2 class="blueTitle centered carouselSlick">
+        Nuestros </br>
+        <strong>Aliados</strong>
+      </h2>
+      <div class="carousel">
         <div class="carouselGroup">
           <div class="carouselCard">
             <img src="<?= themeDirectory(); ?>trashimages/logo1.png" class="carouselItem">
           </div>
-      
+
           <div class="carouselCard">
             <img src="<?= themeDirectory(); ?>trashimages/logo2.jpg" class="carouselItem">
           </div>
-      
+
           <div class="carouselCard">
             <img src="<?= themeDirectory(); ?>trashimages/logo3.png" class="carouselItem">
           </div>
-      
+
           <div class="carouselCard">
             <img src="<?= themeDirectory(); ?>trashimages/logo4.png" class="carouselItem">
           </div>
         </div>
         <!-- Add `aria-hidden` to hide the duplicated carouselCards from screen readers. -->
         <div aria-hidden class="carouselGroup">
-        <div class="carouselCard">
+          <div class="carouselCard">
             <img src="<?= themeDirectory(); ?>trashimages/logo1.png" class="carouselItem">
           </div>
-      
+
           <div class="carouselCard">
             <img src="<?= themeDirectory(); ?>trashimages/logo2.jpg" class="carouselItem">
           </div>
-      
+
           <div class="carouselCard">
             <img src="<?= themeDirectory(); ?>trashimages/logo3.png" class="carouselItem">
           </div>
-      
+
           <div class="carouselCard">
             <img src="<?= themeDirectory(); ?>trashimages/logo4.png" class="carouselItem">
           </div>
         </div>
       </div>
 
-  </div>
+    </div>
 
 
   </div>
 
 
-  <div class="pannelContainer form" style="background-image: url('<?= $themeDirectory; ?>trashimages/pannel3.jpg');"  data-aos="fade-up"  data-aos-duration="700">
-   <h2 class="formHollowTitle">
-    CONTÁCTANOS
-   </h2>
-   <p class="pannelParagraph">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do </br> 
-      eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+  <div class="pannelContainer form" style="background-image: url('<?= $themeDirectory; ?>trashimages/pannel3.jpg');"
+    data-aos="fade-up" data-aos-duration="700">
+    <h2 class="formHollowTitle">
+      CONTÁCTANOS
+    </h2>
+    <p class="pannelParagraph">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do </br>
+      eiusmod tempor incididunt ut labore et dolore magna aliqua.
     </p>
 
     <form class="formContainer">
@@ -393,9 +407,9 @@
       <div class="formSection">
         <div class="formItem comments">
           <h2 class="formItemTitle">
-            Comentarios </br> 
+            Comentarios </br>
 
-            <strong>Agrega aquí tu mensaje y pronto nos comunicaremos </br>  contigo  </strong>
+            <strong>Agrega aquí tu mensaje y pronto nos comunicaremos </br> contigo </strong>
           </h2>
           <input type="text" class="formItemInput">
         </div>
@@ -411,17 +425,17 @@
       <div class="formBottomSection">
         <h2 class="formBottomTitle">Dirección:</h2>
         <p class="formBottomParagraph">
-        Calle 113 No. 7-45. Oficina 503 </br> 
-        Torre B, Ed. Teleport Businness Park
+          Calle 113 No. 7-45. Oficina 503 </br>
+          Torre B, Ed. Teleport Businness Park
         </p>
       </div>
       <span class="verticalLine"> </span>
-      
+
 
       <div class="formBottomSection">
         <h2 class="formBottomTitle">Teléfono:</h2>
         <p class="formBottomParagraph">
-        +60 (1) 7940110
+          +60 (1) 7940110
         </p>
       </div>
       <span class="verticalLine"> </span>
@@ -430,7 +444,7 @@
       <div class="formBottomSection">
         <h2 class="formBottomTitle">Celular:</h2>
         <p class="formBottomParagraph">
-        01 8000 196015
+          01 8000 196015
         </p>
       </div>
       <span class="verticalLine"> </span>
@@ -438,7 +452,7 @@
       <div class="formBottomSection">
         <h2 class="formBottomTitle">Email:</h2>
         <p class="formBottomParagraph">
-        atencionalcliente@credialianza.com
+          atencionalcliente@credialianza.com
         </p>
       </div>
     </div>

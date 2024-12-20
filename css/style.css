@@ -103,6 +103,10 @@ body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
 }
+/* html,
+body {
+  overflow-x: hidden;
+} */
 img,
 picture,
 video,
@@ -596,7 +600,8 @@ body {
 
 .heroContainer {
   position: relative;
-  height: 60vh;
+  height: 70vh;
+  height: 70dvh;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -634,7 +639,7 @@ body {
 .heroTitle {
   font-size: 120px;
   font-weight: 700;
-  line-height: 1;
+  line-height: 1.1;
   text-align: center;
   color: transparent;
   stroke-width: 3px;
@@ -669,10 +674,10 @@ body {
   color: rgba(255, 255, 255, 1);
   text-align: center;
   margin: 0 auto;
+}
 
-  strong {
-    font-weight: 700;
-  }
+strong {
+  font-weight: 700;
 }
 
 .blueButton {
@@ -1025,11 +1030,31 @@ body {
   align-items: center;
   flex-wrap: nowrap;
   margin-bottom: 100px;
+  padding: 70px 21px;
+  border-radius: 30px;
+  position: relative;
+}
+
+.pt-0 {
+  padding-top: 0;
+}
+
+.py-0 {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.imagePannerContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 70px 21px;
-  border-radius: 30px;
+  left: calc(calc(calc(calc(100vw - 1400px) / 2) * -1) - 10px);
+  width: 100vw;
 }
 
 .pannelContainer.form {
@@ -1049,11 +1074,11 @@ body {
   margin-bottom: 27px;
   color: rgba(245, 245, 245, 1);
   text-align: center;
+}
 
-  strong {
-    font-weight: 600;
-    color: rgba(245, 245, 245, 1);
-  }
+.pannelTitle strong {
+  font-weight: 600;
+  color: rgba(245, 245, 245, 1);
 }
 
 .pannelTitle.shadow {
@@ -1067,14 +1092,24 @@ body {
   color: rgba(255, 255, 255, 1);
   margin-bottom: 25px;
   text-align: center;
+}
 
-  strong {
-    font-weight: 600;
-  }
+.pannelParagraph strong {
+  font-weight: 600;
 }
 
 .pannelParagraph.black {
   color: rgba(35, 35, 35, 1);
+}
+
+.max-w-3xl {
+  max-width: 48rem;
+}
+.max-w-4xl {
+  max-width: 56rem;
+}
+.max-w-5xl {
+  max-width: 64rem;
 }
 
 .panelItemContainer {
@@ -1086,6 +1121,7 @@ body {
   gap: 21px;
   margin-top: 33px;
   margin-bottom: 30px;
+  position: relative;
 }
 
 .pannelItem {
@@ -1127,21 +1163,40 @@ body {
 .pannelLogoContainer {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(calc(100% / 5 - 14px), 1fr));
-  row-gap: 17px;
-  column-gap: 14px;
-  max-width: 1100px;
+  grid-template-columns: repeat(auto-fill, minmax(calc(100% / 4 - 40px), 1fr));
+  row-gap: 40px;
+  column-gap: 40px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
+.threeColumns.pannelLogoContainer {
+  grid-template-columns: repeat(auto-fill, minmax(calc(100% / 3 - 40px), 1fr));
+}
+
+.threeColumns .pannelLogoItem {
+  aspect-ratio: 4/2.5;
+}
+
 .pannelLogoItem {
-  height: 127px;
-  background-color: rgba(255, 255, 255, 0.7);
-  padding: 15px 8px;
+  aspect-ratio: 1 / 1;
+  background-color: #f7f7f7;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 15px;
+  flex-wrap: wrap;
+  border-radius: 15px 15px 0 0;
+}
+
+.footerPannelLogo {
+  width: 100%;
+  text-align: center;
+  background: linear-gradient(180deg, #20b3a3 0%, #247fb4 126.59%);
+  border-radius: 0 0 15px 15px;
+  padding: 15px;
+  color: #fff;
+  font-weight: 800;
+  text-transform: uppercase;
 }
 
 .pannelItemIcon {
@@ -1866,6 +1921,27 @@ body {
   background-color: #e7edf0;
 }
 
+.graySection {
+  position: relative;
+  margin: 0 auto 70px;
+  padding: 70px 0;
+}
+
+.graySection:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: calc(calc(calc(calc(100vw - 1400px) / 2) * -1) - 10px);
+  width: 100vw;
+  height: 100%;
+  background-color: #e7edf0;
+}
+
+.pannelContainer:has(+ .graySection) {
+  margin-bottom: 0;
+  border-radius: 30px 30px 0 0;
+}
+
 .valuesContainer {
   width: 100%;
   display: flex;
@@ -2159,6 +2235,7 @@ body {
   margin: 100px 0;
   position: relative;
   width: 100%;
+  overflow: hidden;
 }
 
 .certificationSection {
@@ -2181,7 +2258,7 @@ body {
   width: calc(50% - 25px);
 }
 
-.certificationTitle {
+.certificationTitle:has(+ h3) {
   margin-bottom: 0px;
 }
 
@@ -2218,6 +2295,7 @@ body {
   justify-content: space-between;
   align-items: flex-start;
   gap: 50px;
+  overflow: initial;
 }
 
 .interactiveAsideUl {
@@ -2227,6 +2305,10 @@ body {
   left: 0;
 }
 
+.narrowerNav .interactiveAsideUl {
+  width: 20%;
+}
+
 .interactiveUl {
   width: 100%;
   position: relative;
@@ -2234,22 +2316,50 @@ body {
 }
 
 .interactiveUlItem {
-  margin-bottom: 50px;
-  cursor: pointer;
+  margin-bottom: 20px;
   font-size: 22px;
+  position: relative;
+  min-height: 70px;
+  display: flex;
+  align-items: center;
+}
+
+.interactiveUlItem::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 4px;
+  height: 0%;
+  background: linear-gradient(180deg, #28b2a2 0%, #227fb3 100%);
+  transition: all 0.35s ease-in-out;
+}
+
+.interactiveUlItem.active::before {
+  height: 100%;
 }
 
 .interactiveUlItem.active {
   font-weight: bold;
 }
 
-.slickArticleSide{
+.narrowerNav .slickArticleSide {
+  width: calc(80% - 50px);
+}
+
+.slickArticleSide {
   width: calc(65% - 50px);
   position: relative;
 }
 
 .siwtchContentSide {
   width: 100%;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+
+.siwtchContentSide.visible {
+  opacity: 1;
 }
 
 .siwtchContentSide ol {
@@ -2269,7 +2379,7 @@ body {
   position: absolute;
   top: -15px;
   right: 100%;
-  color: #248DAE;
+  color: #248dae;
   font-weight: 700;
   font-size: 40px;
   font-family: "Axiforma", serif;
@@ -2302,8 +2412,16 @@ body {
   color: rgba(35, 35, 35, 1);
 }
 
-.guidePdfItem{
-  width: 100%;
+.guidesPdfSection {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 0 25px;
+  flex-wrap: wrap;
+}
+
+.guidePdfItem {
+  width: calc(50% - 12.5px);
   box-shadow: 1px 0pc 10px #00000021;
   border-radius: 20px;
   padding: 40px 30px;
@@ -2314,59 +2432,282 @@ body {
   background-color: #fff;
   text-decoration: none;
 }
-.guidePdfItem:has(+ .guidePdfItem){
+.guidePdfItem:has(+ .guidePdfItem) {
   margin-bottom: 30px;
 }
 
-.pdfIcon{
+.pdfIcon {
   width: 65px;
   height: 65px;
   background-image: url(../images/pdf.svg);
 }
 
-.bg-ct{
+.infoPdf {
+  width: calc(100% - 85px);
+}
+
+.bg-ct {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center center;
 }
 
-.pdfTitle{
+.pdfTitle {
   font-weight: 300;
   font-size: 26px;
-  color: #248DAE;
+  color: #248dae;
   margin-bottom: 5px;
 }
 
-.pdfTitle strong{
-  color: #248DAE;
+.pdfTitle strong {
+  color: #248dae;
   font-weight: 800;
 }
 
-.lastPdfUpdate{
+.lastPdfUpdate {
   font-size: 20px;
   font-weight: 300;
   margin-bottom: 10px;
-  color: #248DAE;
+  color: #248dae;
 }
 
-.siteParagraph{
+.siteParagraph {
   font-size: 22px;
   font-weight: 300;
   line-height: 1.2;
+}
+
+.siteParagraph:has(+ .siteParagraph) {
+  margin-bottom: 20px;
+}
+
+.faqSection p {
+  font-size: 22px;
+  font-weight: 300;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.structureInfo {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.structureCards {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 50px;
+  margin-top: 50px;
+}
+
+.structureCard {
+  padding: 50px 20px;
+  border-radius: 30px;
+  filter: drop-shadow(1px 0 10px #00000021);
+  background-color: #fff;
+  width: calc(33.333% - 33.33333px);
+  text-align: center;
+}
+
+.iconStructureCard {
+  width: 50px;
+  height: 50px;
+  margin: 0 auto 20px;
+}
+
+.structureSubtitleCard {
+  font-weight: 300;
+}
+
+.structureSubtitleCard {
+  font-weight: 300;
+  color: #2283b2;
+  font-size: 30px;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+.structureSubtitleCard strong {
+  color: #2283b2;
+  font-size: 30px;
+  text-transform: uppercase;
+}
+
+.dualCard {
+  width: 100%;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.headerDualCard {
+  width: 100%;
+  position: relative;
+  background: linear-gradient(180deg, #28b2a2 0%, #227fb3 100%);
+  padding: 20px 0;
+  border-radius: 30px 30px 0 0;
+}
+
+.titleDualCard {
+  text-transform: uppercase;
+  font-size: 28px;
+  font-weight: 700;
+  text-align: center;
+  width: 100%;
+  color: #fff;
+}
+
+.contentDualCard {
+  padding: 25px 30px;
+  background-color: #f4f4f4b2;
+  border-radius: 0 0 30px 30px;
+  list-style: none;
+}
+
+.dualCardItem {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.relative {
+  position: relative;
+}
+
+.p-4 {
+  padding: 1rem;
+}
+.p-8 {
+  padding: 2rem;
+}
+.pr-12 {
+  padding-right: 3rem;
+}
+
+.py-16 {
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+.mx-auto {
+  margin-right: auto;
+  margin-left: auto;
+}
+.mb-6 {
+  margin-bottom: 1.5rem;
+}
+.mb-16 {
+  margin-bottom: 4rem;
+}
+.mb-0 {
+  margin-bottom: 0;
+}
+.faq {
+  background-color: #fff;
+  filter: drop-shadow(1px 0 10px #00000021);
+  border-radius: 20px;
+  margin-bottom: 15px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.faqTitle {
+  font-weight: 700;
+  font-size: 22px;
+}
+
+.faqTitle:before {
+  content: "";
+  position: absolute;
+  top: calc(50% - 2px);
+  right: 20px;
+  width: 28px;
+  height: 4px;
+  background: linear-gradient(180deg, #28b2a2 0%, #227fb3 100%);
+  z-index: -1;
+  border-radius: 30px;
+}
+
+.faqTitle::after {
+  content: "";
+  position: absolute;
+  top: calc(50% - 14px);
+  right: 32px;
+  width: 4px;
+  height: 28px;
+  background: linear-gradient(180deg, #28b2a2 0%, #227fb3 100%);
+  border-radius: 20px;
+  z-index: -2;
+  transform: rotate3d(0, 0, 1, 0deg);
+  transition: all 0.2s ease-in-out;
+}
+
+.active.faq .faqTitle:after {
+  transform: rotate3d(0, 0, 1, 90deg);
+}
+
+.faqParagraph {
+  max-height: 0px;
+  margin-top: 0;
+  padding: 0 2rem;
+  overflow: hidden;
+  transition: all 0.2s ease-out;
+}
+
+.faq.active .faqParagraph {
+  padding-bottom: 32px;
 }
 
 @media only screen and (max-width: 1600px) {
 }
 
 @media only screen and (max-width: 1400px) {
+  .formHollowTitle {
+    font-size: 110px;
+  }
   .headerContent,
   .footerContent {
     /*width: 95%;*/
   }
 
+  .formBottom {
+    border-radius: 0 0 0 0;
+  }
+
   .siteMain {
-    overflow-x: hidden;
-    width: 90%;
+    /* overflow: hidden; */
+    width: 100%;
+  }
+
+  .graySection:before,
+  .imagePannerContainer,
+  .vualuesPannel:before {
+    left: 0;
+  }
+
+  .siteMain > div,
+  .siteMain > section {
+    padding-right: 5%;
+    padding-left: 5%;
+    border-radius: 0;
+    overflow: hidden;
+  }
+
+  .slickContiner.slickContiner {
+    padding-right: 0;
+    padding-left: 0;
   }
 
   .topMenu {
@@ -2605,6 +2946,16 @@ body {
 }
 
 @media only screen and (max-width: 1024px) {
+  .certificationSection {
+    gap: 20px;
+  }
+  .outerImgCertification {
+    width: calc(40% - 10px);
+  }
+  .certificationsDetails {
+    width: calc(50% - 10px);
+  }
+
   .pannelLogoContainer {
     grid-template-columns: repeat(
       auto-fill,
@@ -2824,9 +3175,93 @@ body {
   .jobCardMaskTitle {
     font-size: 30px;
   }
+
+  .siteSection {
+    margin: 75px 0;
+  }
+
+  .structureCards {
+    gap: 25px;
+    flex-wrap: wrap;
+    padding: 20px 0;
+  }
+
+  .structureCard {
+    margin-bottom: 25px;
+    width: calc(50% - 12.5px);
+  }
 }
 
 @media only screen and (max-width: 768px) {
+  .narrowerNav .slickArticleSide {
+    width: 100%;
+  }
+
+  .threeColumns.pannelLogoContainer{
+    grid-template-columns: repeat(auto-fill, minmax(calc(100% / 2 - 20px), 1fr));
+  }
+  .dualCardItem{
+    font-size: 18px;
+  }
+  .titleDualCard{
+    font-size: 24px;
+  }
+  .siwtchContentSide li p{
+    font-size: 18px;
+  }
+  .structureCards {
+    padding: 10px 0;
+  }
+
+  .structureCard {
+    margin-bottom: 20px;
+    width: 100%;
+  }
+  .darkGradient::after {
+    border-radius: 0;
+  }
+  .interactiveAsideUl {
+    display: none;
+  }
+  .pdfIcon {
+    width: 45px;
+    height: 45px;
+  }
+
+  .pdfTitle {
+    font-size: 22px;
+  }
+
+  .guidePdfItem {
+    padding: 30px 20px;
+  }
+
+  .siteParagraph {
+    font-size: 18px;
+  }
+
+  .infoPdf {
+    width: calc(100% - 65px);
+  }
+  .guidesPdfSection {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  .guidePdfItem {
+    width: 100%;
+  }
+  .slickArticleSide {
+    width: 100%;
+  }
+  .siteSection {
+    margin: 50px 0;
+  }
+  .outerImgCertification {
+    width: 100%;
+  }
+  .certificationsDetails {
+    width: 100%;
+  }
   .headerIcon {
     height: 32px;
   }
@@ -2880,8 +3315,10 @@ body {
   .pannelLogoContainer {
     grid-template-columns: repeat(
       auto-fill,
-      minmax(calc(100% / 2 - 14px), 1fr)
+      minmax(calc(100% / 2 - 10px), 1fr)
     );
+    column-gap: 20px;
+    row-gap: 20px;
   }
 
   .dualContainer,

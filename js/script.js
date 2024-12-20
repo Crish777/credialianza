@@ -14,7 +14,8 @@ let mainSlider,
   mainGalleryContent,
   interactiveUlItem,
   slickArticleSide,
-  siwtchContentSide;
+  siwtchContentSide,
+  faqTitle;
 
 jQuery(document).ready(function ($) {
   gsap.registerPlugin(ScrollTrigger);
@@ -32,51 +33,59 @@ jQuery(document).ready(function ($) {
 });
 
 const riskManagmentAnimation = () => {
-  let tl = gsap.timeline({
-    // yes, we can add it to an entire timeline!
-    scrollTrigger: {
-      trigger: ".slickArticleSide",
-      pin: true,
-      start: "0 +=150",
-      end: `bottom bottom`, // end after scrolling 500px beyond the start
-      scrub: 1, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
-    },
+  const options = {
+    root: null, // Use the viewport as the root
+    rootMargin: "-55% 0px -35% 0px", // No margin around the root
+  };
+
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+        interactiveUlItem.forEach((item) => {
+          item.classList.remove("active");
+        });
+        interactiveUlItem[entry.target.dataset.index].classList.add("active");
+      } else {
+        entry.target.classList.remove("visible");
+      }
+    });
+  }, options);
+  siwtchContentSide.forEach((el) => {
+    observer.observe(el);
   });
+  // let tl = gsap.timeline({
+  //   // yes, we can add it to an entire timeline!
+  //   scrollTrigger: {
+  //     trigger: ".slickArticleSide",
+  //     pin: true,
+  //     start: "0 +=150",
+  //     end: `100% bottom `, // end after scrolling 500px beyond the start
+  //     scrub: 1, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
+  //     markers: true,
+  //     duration: 3
+  //   },
+  // });
 
-  // tl.addLabel('init')
-  // .to('.slickArticleSide', {
-  //   translateY: `${-100}%`
-  // })
-
-  siwtchContentSide.forEach((el, index) => {
-    const windowMajorHeight = window.innerHeight > el.offsetHeight;
-    console.log(windowMajorHeight);
-
-    const newMovement =
-      window.innerHeight -
-      150 -
-      el.offsetHeight -
-      el.offsetHeight * index -
-      30 * index;
-    tl.to(interactiveUlItem[index], {
-      fontWeight: "bold",
-    })
-      .addLabel("init")
-      .to(
-        el,
-        {
-          translateY: newMovement,
-        },
-        "<"
-      );
-    if (index < siwtchContentSide.length - 1) {
-      tl.to(el, {
-        opacity: 0,
-      });
-    }
-    // totalHeight += el.offsetHeight;
-    // console.log(totalHeight);
-  });
+  // siwtchContentSide.forEach((el, index) => {
+  //   tl.to(interactiveUlItem[index], {
+  //     fontWeight: "bold",
+  //   }).to(
+  //     el,
+  //     {
+  //       transform: `translate(0, calc(${-100 * (index + 1)}% + ${
+  //         30 * -(index + 1)
+  //       }px))`,
+  //       duration: 3000
+  //     },
+  //     "<"
+  //   );
+  // if (index < siwtchContentSide.length - 1) {
+  //   tl.to(el, {
+  //     opacity: 0,
+  //   });
+  // }
+  // });
 };
 
 function initslick() {
@@ -134,6 +143,7 @@ function createVars() {
   siteHeader = document.querySelector(".siteHeader");
   interactiveUlItem = document.querySelectorAll(".interactiveUlItem");
   siwtchContentSide = document.querySelectorAll(".siwtchContentSide");
+  faqTitle = document.querySelectorAll(".faqTitle");
 
   if (hasMap) {
     mapContainer = $("#mapContainer");
@@ -144,22 +154,40 @@ function createVars() {
 }
 
 function setListeners() {
-  if (interactiveUlItem.length > 0) {
-    interactiveUlItem.forEach((item) => {
+  if (faqTitle.length > 0) {
+    faqTitle.forEach((item) => {
       item.addEventListener("click", () => {
-        if (item.classList.contains("active")) {
-          return;
+        let parentNode = item.parentNode;
+        parentNode.classList.toggle("active");
+        let nextElement = item.nextElementSibling;
+        if (!parentNode.classList.contains("active")) {
+          nextElement.style.maxHeight = null;
+        } else {
+          nextElement.style.maxHeight =
+          item.nextElementSibling.scrollHeight + 32 + "px";
         }
-        let itemSelected = item.parentNode.querySelector(
-          ".interactiveUlItem.active"
-        );
-        if (itemSelected) {
-          itemSelected.classList.remove("active");
-        }
-        item.classList.add("active");
+        
+
       });
     });
   }
+
+  // if (interactiveUlItem.length > 0) {
+  //   interactiveUlItem.forEach((item) => {
+  //     item.addEventListener("click", () => {
+  //       if (item.classList.contains("active")) {
+  //         return;
+  //       }
+  //       let itemSelected = item.parentNode.querySelector(
+  //         ".interactiveUlItem.active"
+  //       );
+  //       if (itemSelected) {
+  //         itemSelected.classList.remove("active");
+  //       }
+  //       item.classList.add("active");
+  //     });
+  //   });
+  // }
   // Scrolling
   window.addEventListener("resize", () => {});
 
