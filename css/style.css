@@ -2005,6 +2005,11 @@ strong {
 /*------Mapa------*/
 
 .pannelMap {
+  position: relative;
+  width: 100%;
+}
+
+.innerPanelMap {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -2012,13 +2017,15 @@ strong {
   flex-wrap: nowrap;
   width: 100%;
   margin-bottom: 50px;
+  height: 100vh;
+  min-height: 700px;
 }
 
 .mapContainer {
   width: 70%;
   float: left;
   position: relative;
-  height: 500px;
+  height: 100%;
 }
 
 .markerContent {
@@ -2063,14 +2070,13 @@ strong {
 
 .listContainer {
   width: 30%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 20px;
-  flex-wrap: nowrap;
-  padding: 58px 30px;
+  padding: 60px 30px 60px 0;
   overflow-y: auto;
+  height: 100%;
+}
+
+.controllersMapMobile {
+  display: none;
 }
 
 .mapList {
@@ -2674,6 +2680,9 @@ strong {
 }
 
 @media only screen and (max-width: 1400px) {
+  .blueTitle {
+    font-size: 50px;
+  }
   .formHollowTitle {
     font-size: 110px;
   }
@@ -2946,6 +2955,62 @@ strong {
 }
 
 @media only screen and (max-width: 1024px) {
+  .innerPanelMap {
+    position: relative;
+    width: 200%;
+    left: 0;
+    transition: all 0.25s ease-in-out;
+  }
+
+  .showMap.innerPanelMap {
+    left: -100%;
+  }
+  .pannelMap {
+    position: relative;
+    width: 90%;
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+    margin: 0 auto;
+  }
+
+  .listContainer {
+    width: 50%;
+  }
+
+  .mapContainer {
+    width: 50%;
+  }
+
+  .controllersMapMobile {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    left: 0;
+    margin-bottom: 20px;
+  }
+
+  .listView {
+    border-right: 1px solid #fff;
+  }
+
+  .controllerView {
+    width: 50%;
+    background-color: #0081b9;
+    color: #fff;
+    text-align: center;
+    padding: 10px 10px;
+    cursor: pointer;
+    filter: grayscale(0.7);
+    transition: all 0.5s ease;
+  }
+
+  .active.controllerView {
+    filter: grayscale(0);
+  }
+
   .certificationSection {
     gap: 20px;
   }
@@ -3197,16 +3262,19 @@ strong {
     width: 100%;
   }
 
-  .threeColumns.pannelLogoContainer{
-    grid-template-columns: repeat(auto-fill, minmax(calc(100% / 2 - 20px), 1fr));
+  .threeColumns.pannelLogoContainer {
+    grid-template-columns: repeat(
+      auto-fill,
+      minmax(calc(100% / 2 - 20px), 1fr)
+    );
   }
-  .dualCardItem{
+  .dualCardItem {
     font-size: 18px;
   }
-  .titleDualCard{
+  .titleDualCard {
     font-size: 24px;
   }
-  .siwtchContentSide li p{
+  .siwtchContentSide li p {
     font-size: 18px;
   }
   .structureCards {

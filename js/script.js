@@ -8,14 +8,15 @@ var mapContainer, listContainer;
 
 var totalPins = 7;
 var address;
-var iconWidth = 60,
-  iconHeight = 60;
+var iconWidth = 30,
+  iconHeight = 30;
 let mainSlider,
   mainGalleryContent,
   interactiveUlItem,
   slickArticleSide,
   siwtchContentSide,
-  faqTitle;
+  faqTitle,
+  controllerView;
 
 jQuery(document).ready(function ($) {
   gsap.registerPlugin(ScrollTrigger);
@@ -28,6 +29,35 @@ jQuery(document).ready(function ($) {
 
   if (document.getElementById("mapContainer")) {
     hasMap = true;
+    // Initialize and add the map
+    // let map;
+
+    // async function initMap() {
+    //   // The location of Uluru
+    //   const position = { lat: -25.344, lng: 131.031 };
+    //   // Request needed libraries.
+    //   //@ts-ignore
+    //   const { Map } = await google.maps.importLibrary("maps");
+    //   const { AdvancedMarkerElement } = await google.maps.importLibrary(
+    //     "marker"
+    //   );
+
+    //   // The map, centered at Uluru
+    //   map = new Map(document.getElementById("mapContainer"), {
+    //     zoom: 4,
+    //     center: position,
+    //     mapId: "DEMO_MAP_ID",
+    //   });
+
+    //   // The marker, positioned at Uluru
+    //   const marker = new AdvancedMarkerElement({
+    //     map: map,
+    //     position: position,
+    //     title: "Uluru",
+    //   });
+    // }
+
+    // initMap();
     render_map(document.getElementById("mapContainer"), 16);
   }
 });
@@ -144,6 +174,7 @@ function createVars() {
   interactiveUlItem = document.querySelectorAll(".interactiveUlItem");
   siwtchContentSide = document.querySelectorAll(".siwtchContentSide");
   faqTitle = document.querySelectorAll(".faqTitle");
+  controllerView = document.querySelectorAll(".controllerView");
 
   if (hasMap) {
     mapContainer = $("#mapContainer");
@@ -154,6 +185,22 @@ function createVars() {
 }
 
 function setListeners() {
+  if (controllerView.length > 0) {
+    controllerView.forEach((item) => {
+      item.addEventListener("click", () => {
+        item.classList.add("active");
+        if (item.classList.contains("listView")) {
+          controllerView[1].classList.remove("active");
+          $(".innerPanelMap").removeClass("showMap");
+          return;
+        }
+
+        controllerView[0].classList.remove("active");
+        $(".innerPanelMap").addClass("showMap");
+      });
+    });
+  }
+
   if (faqTitle.length > 0) {
     faqTitle.forEach((item) => {
       item.addEventListener("click", () => {
@@ -164,10 +211,8 @@ function setListeners() {
           nextElement.style.maxHeight = null;
         } else {
           nextElement.style.maxHeight =
-          item.nextElementSibling.scrollHeight + 32 + "px";
+            item.nextElementSibling.scrollHeight + 32 + "px";
         }
-        
-
       });
     });
   }
@@ -366,7 +411,7 @@ function render_map($el, $zoom) {
   map = new google.maps.Map($el, args);
 
   var styledMapOptions = {
-    name: "Cachivaches",
+    name: "Credialianza",
   };
   var customMapType = new google.maps.StyledMapType(
     style_credialianza,
@@ -396,7 +441,7 @@ function add_marker($marker) {
   var _id = $marker.attr("data-id");
 
   var pinNum = Math.floor(Math.random() * totalPins) + 1;
-  var iconMap = tpURL + "/images/pin-" + pinNum + ".png";
+  var iconMap = `${themeDirectory}images/mappointerIcon.svg`;
 
   var image = {
     url: iconMap,
@@ -409,7 +454,7 @@ function add_marker($marker) {
   var marker = new google.maps.Marker({
     position: latlng,
     map: map,
-    //icon		: image
+    icon: image,
   });
   //icon		: tpURL
   map.markers.push(marker);
@@ -435,6 +480,9 @@ function add_marker($marker) {
 }
 
 function launchStore(_id) {
+  controllerView[0].classList.remove("active");
+  controllerView[1].classList.add("active");
+  $(".innerPanelMap").addClass("showMap");
   setMapVisible("map");
 
   closeAllInfoWindows();
