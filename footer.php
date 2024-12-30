@@ -86,7 +86,7 @@
 });
 </script> -->
 <script
-  src="https://maps.googleapis.com/maps/api/js?v=3.exp&language=es&region=CO&key=AIzaSyBv6pGLUJhPsv3FELprpnEPH-2pZqExsR8">
+  src="https://maps.googleapis.com/maps/api/js?v=3.exp&language=es&region=CO&key=******">
 </script>
 <!--script src="<?php echo themeDirectory();?>js/aos.js"></script -->
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
